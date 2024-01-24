@@ -31,7 +31,7 @@ return function()
 
   watch (
     'sh ' .. Script_Dir .. 'get_temp.sh c',
-    10,
+    5,
     function(_, stdout)
       temp_widget:get_children_by_id('label')[1].text = stdout
     end
