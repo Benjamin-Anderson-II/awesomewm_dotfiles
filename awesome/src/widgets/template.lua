@@ -1,0 +1,39 @@
+-- Template has been removed, use imparative coding style (with properties)
+-- It's so much nicer to read
+--
+--
+-- Example: Say you want to create a widget that's an icon and some text
+-- 
+-- -- Create the background Container
+-- local bg = wibox.container.background()
+-- bg.bg = "#161925e6"
+-- 
+-- -- Create the icon's textbox
+-- local icon = wibox.widget.textbox()
+-- icon.text = "󰙯"
+--
+-- -- Create the label's textbox
+-- local label = wibox.widget.textbox()
+-- label.text = "Discord"
+-- 
+-- -- Specify the layout
+-- local layout = wibox.layout.fixed.horizontal()
+-- layout.spacing = dpi(10)
+-- layout:add(icon)
+-- layout:add(label)
+--
+-- -- Add it all together
+-- bg.widget = layout
+--
+--
+--
+-- Notes:
+-- general form is:
+--
+-- Background
+-- |_ Layout (fixed.horizontal/vertical)
+--    |_ Text boxes
+--    |_ Margin
+--    |  |_ Place
+--    |     |_ imagebox
+--    |_ Spacing
