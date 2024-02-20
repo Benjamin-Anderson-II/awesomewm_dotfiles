@@ -7,7 +7,7 @@ return function(short)
   if short then
     form = "󰥔 %I:%M 󰃭 %a"
   else
-    form = "󰥔 %I:%M%P 󰃭 %a, %m/%d/%y"
+    form = "󰥔 %I:%M%P 󰃭 %a %m/%d/%y"
   end
   return wibox.widget {
     {

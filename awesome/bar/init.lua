@@ -26,11 +26,16 @@ awful.screen.connect_for_each_screen(
     require("src.modules.powermenu")(s)
 
     s.mypower = require("src.widgets.power")()
-    s.myclock = require("src.widgets.clock")(true)
+    if s.index == 1 then
+      s.myclock = require("src.widgets.clock")(true)
+    else
+      s.myclock = require("src.widgets.clock")(false)
+    end
     s.mybattery = require("src.widgets.battery")()
     s.mywifi = require("src.widgets.wifi")()
     s.mytaglist = require("src.widgets.taglist")(s)
     s.mysound = require("src.widgets.sound")()
+    s.mydisk = require("src.widgets.disk")()
 
     s.mywibox = awful.wibar({ position = "top", screen = s, bg = "#00000000"})
     s.mywibox:setup {
@@ -42,6 +47,7 @@ awful.screen.connect_for_each_screen(
       nil,
       {
         layout = wibox.layout.fixed.horizontal,
+        s.mydisk,
         s.mysound,
         s.mywifi,
         s.mybattery,
