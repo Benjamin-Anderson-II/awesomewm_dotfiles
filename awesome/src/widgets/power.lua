@@ -19,10 +19,10 @@ return function()
       right = dpi(13),
       widget = wibox.container.margin
     },
-    fg = "#f38ba8",
-    bg = "#161925e6",
+    fg = user_vars.colors.red,
+    bg = user_vars.colors.surface0,
     shape = function(cr, width, height)
-      gears.shape.rounded_rect(cr, width - dpi(10), height, 13)
+      gears.shape.rounded_rect(cr, width - dpi(user_vars.distance), height, 13)
     end,
     widget = wibox.container.background
   }

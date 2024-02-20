@@ -3,14 +3,6 @@ local wibox = require("wibox")
 local gears = require("gears")
 local dpi = require("beautiful").xresources.apply_dpi
 
-local icons = {
-  discord = "󰙯",
-  Spotify = "󰓇",
-  firefox = "󰈹",
-  kitty   = "󰆍",
-  Arandr  = "󰋗"
-}
-
 local function client_names(tag)
   local ret = ""
   if #tag:clients() > 0 then
@@ -18,7 +10,7 @@ local function client_names(tag)
     for i = 1, #tag:clients(), 1 do
       local client = tag:clients()[i]
       if client.class then
-        for k,v in pairs(icons) do
+        for k,v in pairs(user_vars.icons) do
           if client.class == k then
             ret = ret .. v .. " "
           end
@@ -34,9 +26,9 @@ local create_widget = function(widget, tag)
   local tag_text = " " .. tag.index .. client_names(tag) .. " "
   widget:get_children_by_id("txt")[1].text = tag_text
   if tag.selected then
-    widget:get_children_by_id("background_role")[1].fg = "#45475a"
+    widget:get_children_by_id("background_role")[1].fg = user_vars.colors.surface1
   else
-    widget:get_children_by_id("background_role")[1].fg = "#94e2d5"
+    widget:get_children_by_id("background_role")[1].fg = user_vars.colors.teal
   end
 end
 
@@ -61,22 +53,22 @@ return function(s)
       },
       id = "background_role",
       widget = wibox.container.background,
-      create_callback = function(self, t, index, tags) --self is the widget instance
+      create_callback = function(self, t, _, _) --self is the widget instance
         create_widget(self, t)
       end,
-      update_callback = function(self, t, index, tags)
+      update_callback = function(self, t, _, _)
         create_widget(self, t)
       end
     },
     buttons = gears.table.join(
       awful.button({}, 1, function(t) t:view_only() end),
-      awful.button({ modkey }, 1, function(t)
+      awful.button({ user_vars.modkey }, 1, function(t)
                                     if client.focus then
                                       client.focus:move_to_tag(t)
                                     end
                                   end),
       awful.button({}, 3, awful.tag.viewtoggle),
-      awful.button({ modkey }, 3, function(t)
+      awful.button({ user_vars.modkey }, 3, function(t)
                                     if client.focus then
                                       client.focus:toggle_tag(t)
                                     end
@@ -88,7 +80,7 @@ return function(s)
 
   return wibox.widget {
     taglist_widget,
-    bg = "#161925e6",
+    bg = user_vars.colors.surface0,
     shape = function(cr, width, height)
       gears.shape.rounded_rect(cr, width, height, 13)
     end,

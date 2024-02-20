@@ -22,10 +22,8 @@ user_vars = {
     awful.layout.suit.max.fullscreen,
   },
 
-  network = {
-    wlan = "wlo1",
-    ethernet = "eno1"
-  },
+  distance = 10,
+  margin = 7,
 
   font = {
     regular   = "Mononoki Nerd Font, 12",
@@ -44,5 +42,47 @@ user_vars = {
 
   screenshot_program = "scrot '%Y-%m-%d_$wx$h.png -e 'optipng $f ; mv $f ~/Pictures/Screenshots/'",
 
-  file_manager = "dolphin"
+  file_manager = "dolphin",
+
+  icons = {
+    discord = "󰙯",
+    Spotify = "󰓇",
+    firefox = "󰈹",
+    kitty   = "󰆍",
+    Arandr  = "󰋗"
+  },
+
+  colors = {
+    base   = "#1e1e2e",
+    mantle = "181825",
+    crust  = "#11111b",
+
+    text     = "#cdd6f4",
+    subtext0 = "#a6adc8",
+    subtext1 = "#bac2de",
+
+    surface0 = "#161925e6",
+    surface1 = "#45475a",
+    surface2 = "#585b70",
+    surface3 = "#394161",
+
+    overlay0 = "#6c7086",
+    overlay1 = "#7f849c",
+    overlay2 = "#9ba3c3",
+
+    blue      = "#89b4fa",
+    lavender  = "#b4befe",
+    sapphire  = "#74c7ec",
+    sky       = "#89dceb",
+    teal      = "#94e2d5",
+    green     = "#a6e3a1",
+    yellow    = "#f9e2af",
+    peach     = "#fab387",
+    maroon    = "#eba0ac",
+    red       = "#f38ba8",
+    mauve     = "#cba6f7",
+    pink      = "#f5c3e7",
+    flamingo  = "#f2cdcd",
+    rosewater = "#f5e0dc",
+  }
 }

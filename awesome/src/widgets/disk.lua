@@ -5,7 +5,7 @@ local dpi = require("beautiful").xresources.apply_dpi
 local watch = awful.widget.watch
 
 return function()
-  local battery_widget = wibox.widget {
+  local disk_widget = wibox.widget {
     {
       {
         {
@@ -17,34 +17,34 @@ return function()
         },
         layout = wibox.layout.fixed.horizontal
       },
-      left = dpi(7),
-      right = dpi(12),
+      left = dpi(user_vars.margin),
+      right = dpi(user_vars.margin + user_vars.distance + 1),
       widget = wibox.container.margin
     },
-    fg = "#fab387",
-    bg = "#161925e6",
+    fg = user_vars.colors.peach,
+    bg = user_vars.colors.surface0,
     shape = function(cr, width, height)
-      gears.shape.rounded_rect(cr, width - dpi(5), height, 13)
+      gears.shape.rounded_rect(cr, width - dpi(user_vars.distance), height, 13)
     end,
     widget = wibox.container.background
   }
 
-  local function update_battery()
+  local function update_disk()
     awful.spawn.easy_async_with_shell(
-      "df -h | rg -U '/\\n' | sed -n 's/.* .* \\([0-1].*[A-Z]\\).*/ \\1iB/p'",
+      "echo  $(df -h | rg -U '/\\n' | sed -n 's/.* .* \\([0-9].*[A-Z]\\).*/\\1/p' | sed 's/.$//') GiB",
       function(stdout)
-        battery_widget:get_children_by_id('label')[1].text = stdout
+        disk_widget:get_children_by_id('label')[1].text = stdout
       end
     )
   end
 
   watch (
-    [[acpi -b | sed -n 's/.* \(.*\)%.*/\1%/p']],
-    30,
+    'echo a',
+    300,
     function()
-      update_battery()
-    end
+      update_disk()
+   end
   )
 
-  return battery_widget
+  return disk_widget
 end

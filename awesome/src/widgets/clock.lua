@@ -7,7 +7,7 @@ return function(short)
   if short then
     form = "󰥔 %I:%M 󰃭 %a"
   else
-    form = "󰥔 %I:%M%P 󰃭 %a %m/%d/%y"
+    form = "󰥔 %I:%M%P 󰃭 %a: %b %d"
   end
   return wibox.widget {
     {
@@ -21,14 +21,14 @@ return function(short)
         },
         layout = wibox.layout.fixed.horizontal
       },
-      left = dpi(7),
-      right = dpi(12),
+      left = dpi(user_vars.margin),
+      right = dpi(user_vars.margin + user_vars.distance + 1),
       widget = wibox.container.margin
     },
-    fg = "#74c7ec",
-    bg = "#161925e6",
+    fg = user_vars.colors.flamingo,
+    bg = user_vars.colors.surface0,
     shape = function (cr, width, height)
-      gears.shape.partially_rounded_rect(cr, width - dpi(5), height, false, true, true, false, 13)
+      gears.shape.rounded_rect(cr, width - dpi(user_vars.distance), height, 13)
     end,
     widget = wibox.container.background
   }

@@ -5,6 +5,8 @@ local dpi = require("beautiful").xresources.apply_dpi
 local watch = awful.widget.watch
 
 return function()
+  local distance = 5
+  local margin = 7
   local battery_widget = wibox.widget {
     {
       {
@@ -17,29 +19,37 @@ return function()
         },
         layout = wibox.layout.fixed.horizontal
       },
-      left = dpi(7),
-      right = dpi(3),
+      left = dpi(user_vars.margin),
+      right = dpi(1 + user_vars.distance + user_vars.margin),
       widget = wibox.container.margin
     },
-    fg = "#a6e3a1",
-    bg = "#161925e6",
+    fg = user_vars.colors.green,
+    bg = user_vars.colors.surface0,
     shape = function(cr, width, height)
-      gears.shape.rectangle(cr, width, height)
+      gears.shape.partially_rounded_rect(cr,
+                                         width - dpi(user_vars.distance),
+                                         height,
+                                         false,
+                                         true,
+                                         true,
+                                         false,
+                                         13
+                                        )
     end,
     widget = wibox.container.background
   }
 
   local function update_battery()
     awful.spawn.easy_async_with_shell(
-      [[acpi -b | sed -n 's/.* \(.*\)%.*/\1%/p']],
+      [[acpi -b | sed -n 's/.* \(.*\)%.*/󰁹 \1%/p']],
       function(stdout)
-        battery_widget:get_children_by_id('label')[1].text = "󰁹 "..stdout
+        battery_widget:get_children_by_id('label')[1].text = stdout
       end
     )
   end
 
   watch (
-    [[acpi -b | sed -n 's/.* \(.*\)%.*/\1%/p']],
+    "echo a",
     5,
     function()
       update_battery()

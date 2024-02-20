@@ -16,3 +16,6 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   command = 'setlocal nolist wrap linebreak breakat&vim'
 })
 vim.cmd("autocmd FileType vimwiki nnoremap <buffer> <Leader>wx :VimwikiToggleListItem<CR>")
+
+vim.cmd("let g:wiki_root = '~/wiki'")
+vim.cmd("let g:vimwiki_ext2syntax = {}")

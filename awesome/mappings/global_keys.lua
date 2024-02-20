@@ -63,10 +63,12 @@ return gears.table.join(
 ---- Brightness ----
   awful.key({}, "XF86MonBrightnessDown", function()
     awful.util.spawn_with_shell("sh " .. Script_Dir .. "lower_brightness.sh")
+    awesome.emit_signal("brightness::level:change")
   end,
   {description = "Lower Brightness", group = "Brightness"}),
   awful.key({}, "XF86MonBrightnessUp", function()
     awful.util.spawn_with_shell("sh " .. Script_Dir .. "raise_brightness.sh")
+    awesome.emit_signal("brightness::level:change")
   end,
   {description = "Lower Brightness", group = "Brightness"}),
 

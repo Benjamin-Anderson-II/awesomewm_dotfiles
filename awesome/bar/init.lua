@@ -1,5 +1,6 @@
 local awful = require("awful")
 local beautiful = require("beautiful")
+local dpi = beautiful.xresources.apply_dpi
 local gears = require("gears")
 local wibox = require("wibox")
 
@@ -36,24 +37,54 @@ awful.screen.connect_for_each_screen(
     s.mytaglist = require("src.widgets.taglist")(s)
     s.mysound = require("src.widgets.sound")()
     s.mydisk = require("src.widgets.disk")()
+    s.myweather = require("src.widgets.weather")()
+    s.mybrightness = require("src.widgets.brightness")()
 
-    s.mywibox = awful.wibar({ position = "top", screen = s, bg = "#00000000"})
+    local gradient = gears.color{
+      type = "linear",
+      from = { 0, 0 },
+      to = { 0, 25 },
+      stops = {
+        { 0,   user_vars.colors.base },
+        { 0.3, user_vars.colors.base .. "77" },
+        { 0.6, user_vars.colors.base .. "33" },
+        { 1,   user_vars.colors.base .. "00" },
+      }
+    }
+
+    s.mywibox = awful.wibar({
+      position = "top",
+      screen = s,
+      bg = gradient,
+      height = dpi(33)
+    })
+
     s.mywibox:setup {
-      layout = wibox.layout.align.horizontal,
       {
-        layout = wibox.layout.fixed.horizontal,
-        s.mytaglist
+        {
+          layout = wibox.layout.fixed.horizontal,
+          s.mytaglist
+        },
+        widget = wibox.container.margin,
+        margins = dpi(3)
       },
       nil,
       {
-        layout = wibox.layout.fixed.horizontal,
-        s.mydisk,
-        s.mysound,
-        s.mywifi,
-        s.mybattery,
-        s.myclock,
-        s.mypower
+        {
+          layout = wibox.layout.fixed.horizontal,
+          s.mydisk,
+          s.mywifi,
+          s.mysound,
+          s.mybrightness,
+          s.mybattery,
+          s.myclock,
+          s.myweather,
+          s.mypower
+        },
+        widget = wibox.container.margin,
+        margins = dpi(3)
       },
+      layout = wibox.layout.align.horizontal,
     }
 
     -- Note:
