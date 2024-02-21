@@ -5,8 +5,6 @@ local dpi = require("beautiful").xresources.apply_dpi
 local watch = awful.widget.watch
 
 return function()
-  local distance = 5
-  local margin = 7
   local battery_widget = wibox.widget {
     {
       {

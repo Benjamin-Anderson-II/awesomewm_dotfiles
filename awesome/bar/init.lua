@@ -37,8 +37,13 @@ awful.screen.connect_for_each_screen(
     s.mytaglist = require("src.widgets.taglist")(s)
     s.mysound = require("src.widgets.sound")()
     s.mydisk = require("src.widgets.disk")()
-    s.myweather = require("src.widgets.weather")()
+
+    -- [[ Stopped Working, not worth fixing ]]--
+    -- s.myweather = require("src.widgets.weather")()
     s.mybrightness = require("src.widgets.brightness")()
+    s.mymemory = require("src.widgets.memory")()
+    s.mycpu = require("src.widgets.cpu")()
+    s.mytemp = require("src.widgets.tempurature")()
 
     local gradient = gears.color{
       type = "linear",
@@ -63,22 +68,37 @@ awful.screen.connect_for_each_screen(
       {
         {
           layout = wibox.layout.fixed.horizontal,
-          s.mytaglist
+          s.mycpu,
+          s.mymemory,
+          s.mytemp,
+          s.mydisk,
+          s.mywifi,
         },
         widget = wibox.container.margin,
         margins = dpi(3)
       },
-      nil,
+      {
+        {
+          nil,
+          {
+            layout = wibox.layout.fixed.horizontal,
+            s.mytaglist
+          },
+          nil,
+          expand = "outside",
+          layout = wibox.layout.align.horizontal
+        },
+        widget = wibox.container.margin,
+        margins = dpi(3)
+      },
       {
         {
           layout = wibox.layout.fixed.horizontal,
-          s.mydisk,
-          s.mywifi,
           s.mysound,
           s.mybrightness,
           s.mybattery,
           s.myclock,
-          s.myweather,
+          -- s.myweather,
           s.mypower
         },
         widget = wibox.container.margin,

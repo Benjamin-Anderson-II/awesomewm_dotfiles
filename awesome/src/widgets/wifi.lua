@@ -40,7 +40,7 @@ return function()
 
   watch (
     [[nmcli -t -f NAME c s -a ; nmcli -t -f CONNECTIVITY g]],
-    5,
+    60,
     function()
       update_wifi()
     end
