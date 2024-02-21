@@ -49,7 +49,8 @@ user_vars = {
     Spotify = "󰓇",
     firefox = "󰈹",
     kitty   = "󰆍",
-    Arandr  = "󰋗"
+    mpv     = "",
+    dne     = "󰋗",
   },
 
   colors = {

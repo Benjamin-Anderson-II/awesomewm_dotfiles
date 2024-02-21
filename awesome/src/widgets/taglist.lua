@@ -10,10 +10,15 @@ local function client_names(tag)
     for i = 1, #tag:clients(), 1 do
       local client = tag:clients()[i]
       if client.class then
+        local found = false
         for k,v in pairs(user_vars.icons) do
           if client.class == k then
             ret = ret .. v .. " "
+            found = true
           end
+        end
+        if found == false then
+          ret = ret .. user_vars.icons.dne .. " "
         end
       end
     end

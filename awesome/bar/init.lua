@@ -72,7 +72,6 @@ awful.screen.connect_for_each_screen(
           s.mymemory,
           s.mytemp,
           s.mydisk,
-          s.mywifi,
         },
         widget = wibox.container.margin,
         margins = dpi(3)
@@ -94,6 +93,7 @@ awful.screen.connect_for_each_screen(
       {
         {
           layout = wibox.layout.fixed.horizontal,
+          s.mywifi,
           s.mysound,
           s.mybrightness,
           s.mybattery,
