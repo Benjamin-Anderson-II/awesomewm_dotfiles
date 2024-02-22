@@ -65,46 +65,61 @@ awful.screen.connect_for_each_screen(
     })
 
     s.mywibox:setup {
+      nil,
       {
         {
-          layout = wibox.layout.fixed.horizontal,
-          s.mycpu,
-          s.mymemory,
-          s.mytemp,
-          s.mydisk,
-          s.mywifi,
-        },
-        widget = wibox.container.margin,
-        margins = dpi(3)
-      },
-      {
-        {
-          nil,
           {
             layout = wibox.layout.fixed.horizontal,
-            s.mytaglist
+            s.mycpu,
+            s.mymemory,
+            s.mytemp,
+            s.mydisk,
+            s.mywifi,
           },
-          nil,
-          expand = "outside",
-          layout = wibox.layout.align.horizontal
+          widget = wibox.container.margin,
+          right = dpi(3),
+          top = dpi(3),
+          left = dpi(10),
+          bottom = dpi(3),
         },
-        widget = wibox.container.margin,
-        margins = dpi(3)
-      },
-      {
         {
-          layout = wibox.layout.fixed.horizontal,
-          --s.mywifi,
-          s.mysound,
-          s.mybrightness,
-          s.mybattery,
-          s.myclock,
-          s.myweather,
-          s.mypower
+          {
+            nil,
+            {
+              layout = wibox.layout.fixed.horizontal,
+              s.mytaglist
+            },
+            nil,
+            expand = "outside",
+            layout = wibox.layout.align.horizontal
+          },
+          widget = wibox.container.margin,
+          margins = dpi(3)
         },
-        widget = wibox.container.margin,
-        margins = dpi(3)
+        {
+          {
+            nil,
+            nil,
+            {
+              s.mysound,
+              s.mybrightness,
+              s.mybattery,
+              s.myclock,
+              s.myweather,
+              s.mypower,
+              layout = wibox.layout.fixed.horizontal
+            },
+            layout = wibox.layout.align.horizontal,
+          },
+          widget = wibox.container.margin,
+          right = dpi(10),
+          top = dpi(3),
+          left = dpi(3),
+          bottom = dpi(3),
+        },
+        layout = wibox.layout.flex.horizontal
       },
+      nil,
       layout = wibox.layout.align.horizontal,
     }
 

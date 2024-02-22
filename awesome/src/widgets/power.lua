@@ -15,14 +15,14 @@ return function()
         },
         layout = wibox.layout.fixed.horizontal
       },
-      left = dpi(10),
-      right = dpi(13),
+      left = dpi(user_vars.margin+2),
+      right = dpi(1),
       widget = wibox.container.margin
     },
     fg = user_vars.colors.red,
     bg = user_vars.colors.surface0,
     shape = function(cr, width, height)
-      gears.shape.rounded_rect(cr, width - dpi(user_vars.distance), height, 13)
+      gears.shape.rounded_rect(cr, width, height, 13)
     end,
     widget = wibox.container.background
   }
