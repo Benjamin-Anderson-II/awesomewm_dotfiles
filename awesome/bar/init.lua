@@ -39,7 +39,7 @@ awful.screen.connect_for_each_screen(
     s.mydisk = require("src.widgets.disk")()
 
     -- [[ Stopped Working, not worth fixing ]]--
-    -- s.myweather = require("src.widgets.weather")()
+    s.myweather = require("src.widgets.weather")()
     s.mybrightness = require("src.widgets.brightness")()
     s.mymemory = require("src.widgets.memory")()
     s.mycpu = require("src.widgets.cpu")()
@@ -72,6 +72,7 @@ awful.screen.connect_for_each_screen(
           s.mymemory,
           s.mytemp,
           s.mydisk,
+          s.mywifi,
         },
         widget = wibox.container.margin,
         margins = dpi(3)
@@ -93,12 +94,12 @@ awful.screen.connect_for_each_screen(
       {
         {
           layout = wibox.layout.fixed.horizontal,
-          s.mywifi,
+          --s.mywifi,
           s.mysound,
           s.mybrightness,
           s.mybattery,
           s.myclock,
-          -- s.myweather,
+          s.myweather,
           s.mypower
         },
         widget = wibox.container.margin,
