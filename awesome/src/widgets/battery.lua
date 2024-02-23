@@ -37,20 +37,11 @@ return function()
     widget = wibox.container.background
   }
 
-  local function update_battery()
-    awful.spawn.easy_async_with_shell(
-      [[acpi -b | sed -n 's/.* \(.*\)%.*/󰁹 \1%/p']],
-      function(stdout)
-        battery_widget:get_children_by_id('label')[1].text = stdout
-      end
-    )
-  end
-
   watch (
-    "echo a",
-    5,
-    function()
-      update_battery()
+    "sh " .. Script_Dir .. "get_battery.sh",
+    1,
+    function(_, stdout)
+      battery_widget:get_children_by_id('label')[1].text = stdout
     end
   )
 
