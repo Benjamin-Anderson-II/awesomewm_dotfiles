@@ -31,7 +31,7 @@ return function()
 
   watch (
     'sh ' .. Script_Dir .. 'get_memory.sh g',
-    5,
+    1,
     function(_, stdout)
       memory_widget:get_children_by_id('label')[1].text = stdout
     end
