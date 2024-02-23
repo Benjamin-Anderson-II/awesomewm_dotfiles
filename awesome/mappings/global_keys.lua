@@ -27,6 +27,10 @@ return gears.table.join(
 
 ---- APPLICATIONS ----
   awful.key({ modkey }, "space", function()
+    awful.spawn.with_shell("rofi -show drun")
+  end,
+  { description = "Open Terminal", group = "Application" }),
+  awful.key({ modkey }, "t", function()
     awful.spawn(user_vars.terminal)
   end,
   { description = "Open Terminal", group = "Application" }),
@@ -42,6 +46,10 @@ return gears.table.join(
     awful.util.spawn("spotify-launcher")
   end,
   { description = "Open Spotify", group = "Application"}),
+  awful.key({ modkey }, "j", function()
+    awful.util.spawn("kitty ranger")
+  end,
+  { description = "Open Ranger", group = "Application"}),
 
 ---- SOUND ----
   awful.key({}, "XF86AudioRaiseVolume", function()
