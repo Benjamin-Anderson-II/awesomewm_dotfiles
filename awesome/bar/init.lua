@@ -69,36 +69,21 @@ awful.screen.connect_for_each_screen(
       {
         {
           {
-            layout = wibox.layout.fixed.horizontal,
-            s.mycpu,
-            s.mymemory,
-            s.mytemp,
-            s.mydisk,
-            s.mywifi,
-          },
-          widget = wibox.container.margin,
-          right = dpi(3),
-          top = dpi(3),
-          left = dpi(10),
-          bottom = dpi(3),
-        },
-        {
-          {
             nil,
-            {
-              layout = wibox.layout.fixed.horizontal,
-              s.mytaglist
-            },
+            s.mytaglist,
             nil,
             expand = "outside",
             layout = wibox.layout.align.horizontal
           },
-          widget = wibox.container.margin,
-          margins = dpi(3)
-        },
-        {
           {
-            nil,
+            {
+              s.mycpu,
+              s.mymemory,
+              s.mytemp,
+              s.mydisk,
+              s.mywifi,
+              layout = wibox.layout.fixed.horizontal
+            },
             nil,
             {
               s.mysound,
@@ -109,15 +94,15 @@ awful.screen.connect_for_each_screen(
               s.mypower,
               layout = wibox.layout.fixed.horizontal
             },
-            layout = wibox.layout.align.horizontal,
+            layout = wibox.layout.align.horizontal
           },
-          widget = wibox.container.margin,
-          right = dpi(10),
-          top = dpi(3),
-          left = dpi(3),
-          bottom = dpi(3),
+          layout = wibox.layout.stack
         },
-        layout = wibox.layout.flex.horizontal
+        widget = wibox.container.margin,
+        top = dpi(3),
+        bottom = dpi(3),
+        left = dpi(10),
+        right = dpi(10),
       },
       nil,
       layout = wibox.layout.align.horizontal,
