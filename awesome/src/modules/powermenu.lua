@@ -94,15 +94,15 @@ return function(s)
   local powermenu_keygrabber = awful.keygrabber {
     autostart   = false,
     stop_event  = "release",
-    keypressed_callback = function(self, mod, key, command)
+    keypressed_callback = function(_, _, key, _)
       if key == "Escape" then
         awesome.emit_signal("module::powermenu:toggle")
       end
     end,
-    start_callback = function(keygrabber)
+    start_callback = function(_)
       keygrabber_started = true
     end,
-    stop_callback = function(self, stop_key, stop_mod, sequence)
+    stop_callback = function(_, _, _, _)
       keygrabber_started = false
     end
   }

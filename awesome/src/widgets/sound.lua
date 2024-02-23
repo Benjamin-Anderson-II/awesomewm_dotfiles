@@ -25,27 +25,39 @@ return function()
     shape = function(cr, width, height)
       gears.shape.partially_rounded_rect(cr, width, height, true, false, false, true, 13)
     end,
-    widget = wibox.container.background
+    widget = wibox.container.background,
+    buttons = gears.table.join()
   }
+
+  local get_volume = function()
+    awful.spawn.easy_async("sh " .. Script_Dir .. "get_volume.sh",
+      function(stdout)
+        sound_widget:get_children_by_id("icon")[1].text = stdout
+      end
+    )
+  end
+
+  sound_widget:buttons(awful.util.table.join(
+    awful.button({}, 1, function()
+      awful.util.spawn("sh " .. Script_Dir .. "set_volume.sh 0")
+      awesome.emit_signal("sound::volume:change")
+    end),
+    awful.button({}, 4, function()
+      awful.util.spawn("sh " .. Script_Dir .. "set_volume.sh +")
+      awesome.emit_signal("sound::volume:change")
+    end),
+    awful.button({}, 5, function()
+      awful.util.spawn("sh " .. Script_Dir .. "set_volume.sh -")
+      awesome.emit_signal("sound::volume:change")
+    end)
+  ))
 
   awesome.connect_signal(
     "sound::volume:change",
-    function()
-      awful.spawn.easy_async("sh " .. Script_Dir .. "get_volume.sh",
-        function(stdout)
-          sound_widget:get_children_by_id("icon")[1].text = stdout
-        end
-      )
-    end
+    get_volume
   )
 
-  -- add connect signal to mouse 1, 4, 5 for mute, vol up, and vol down respectively
-
-  awful.spawn.easy_async("sh /home/Ben/.config/awesome/src/scripts/get_volume.sh",
-    function(stdout)
-      sound_widget:get_children_by_id("icon")[1].text = stdout
-    end
-  )
+  awesome.emit_signal("sound::volume:change")
 
   return sound_widget
 end

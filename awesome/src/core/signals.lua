@@ -2,7 +2,7 @@ local awful = require("awful")
 local beautiful = require("beautiful")
 local gears = require("gears")
 local wibox = require("wibox")
---[[
+
 screen.connect_signal("property::geometry", function(s)
   if beautiful.wallpaper then
     if type(beautiful.wallpaper) == 'string' then
@@ -13,17 +13,7 @@ screen.connect_signal("property::geometry", function(s)
   end
 end)
 
-screen.connect_signal(
-  "added",
-  function() awesome.restart() end
-)
-
-screen.connect_signal(
-  "removed",
-  function() awesome.restart() end
-)
---]]
-
+awful.widget.watch("autorandr -c", 5)
 
 client.connect_signal("manage", function (c)
     -- Set the windows at the slave,
@@ -78,11 +68,5 @@ client.connect_signal("request::titlebars", function(c)
     }
 end)
 
--- Enable sloppy focus, so that focus follows mouse.
---[[
-client.connect_signal("mouse::enter", function(c)
-    c:emit_signal("request::activate", "mouse_enter", {raise = false})
-end)
---]]
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)

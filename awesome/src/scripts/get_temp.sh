@@ -23,7 +23,7 @@ elif [[ $temp_d -lt $mid ]]; then
 elif [[ $temp_d -lt $high ]]; then
   echo "" $temp
 elif [[ $temp_d -lt $crit ]]; then
-  echo " " $temp
+  echo "" $temp
 else
   echo "" $temp
 fi

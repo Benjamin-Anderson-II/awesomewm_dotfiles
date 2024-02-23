@@ -1,7 +1,7 @@
 local awful = require("awful")
 local gears = require("gears")
-Theme_Dir = gears.filesystem.get_configuration_dir() .. "/src/theme/"
-Script_Dir = gears.filesystem.get_configuration_dir() .. "/src/scripts/"
+Theme_Dir = gears.filesystem.get_configuration_dir() .. "src/theme/"
+Script_Dir = gears.filesystem.get_configuration_dir() .. "src/scripts/"
 
 user_vars = {
   layouts = {

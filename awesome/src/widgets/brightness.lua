@@ -4,7 +4,6 @@ local gears = require("gears")
 local wibox = require("wibox")
 
 return function()
-  local margin = 5
   local brightness_widget = wibox.widget {
     {
       {
@@ -29,24 +28,31 @@ return function()
     widget = wibox.container.background
   }
 
+  local get_brightness = function ()
+    awful.spawn.easy_async("sh " .. Script_Dir .. "get_brightness.sh",
+      function(stdout)
+        brightness_widget:get_children_by_id("icon")[1].text = stdout
+      end
+    )
+  end
+
+  brightness_widget:buttons(awful.util.table.join(
+    awful.button({}, 4, function()
+      awful.util.spawn("sh " .. Script_Dir .. "raise_brightness.sh")
+      awesome.emit_signal("brightness::level:change")
+    end),
+    awful.button({}, 5, function()
+      awful.util.spawn("sh " .. Script_Dir .. "lower_brightness.sh")
+      awesome.emit_signal("brightness::level:change")
+    end)
+  ))
+
   awesome.connect_signal(
     "brightness::level:change",
-    function()
-      awful.spawn.easy_async("sh " .. Script_Dir .. "get_brightness.sh",
-        function(stdout)
-          brightness_widget:get_children_by_id("icon")[1].text = stdout
-        end
-      )
-    end
+    get_brightness
   )
 
-  -- add connect signal to mouse 1, 4, 5 for mute, vol up, and vol down respectively
-
-  awful.spawn.easy_async("sh " .. Script_Dir .. "get_brightness.sh",
-    function(stdout)
-      brightness_widget:get_children_by_id("icon")[1].text = stdout
-    end
-  )
+  awesome.emit_signal("brightness::level:change")
 
   return brightness_widget
 end
