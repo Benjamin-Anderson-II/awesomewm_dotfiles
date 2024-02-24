@@ -1,8 +1,6 @@
-local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 local dpi = require("beautiful").xresources.apply_dpi
-local watch = awful.widget.watch
 
 return function()
   local cpu_widget = wibox.widget {
@@ -29,10 +27,9 @@ return function()
     widget = wibox.container.background
   }
 
-  watch (
-    'sh ' .. Script_Dir .. 'cpu.sh',
-    2,
-    function(_, stdout)
+  awesome.connect_signal(
+    "widget::cpu:update",
+    function(stdout)
       cpu_widget:get_children_by_id('label')[1].text = stdout
     end
   )

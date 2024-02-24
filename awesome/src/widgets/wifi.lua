@@ -1,8 +1,6 @@
-local awful = require("awful")
 local gears = require("gears")
 local wibox = require('wibox')
 local dpi = require("beautiful").xresources.apply_dpi
-local watch = awful.widget.watch
 
 return function()
   local wifi_widget = wibox.widget {
@@ -29,20 +27,10 @@ return function()
     widget = wibox.container.background
   }
 
-  local function update_wifi()
-    awful.spawn.easy_async_with_shell(
-      "sh " .. Script_Dir .. "network.sh",
-      function(stdout)
-        wifi_widget:get_children_by_id('label')[1].text = stdout
-      end
-    )
-  end
-
-  watch (
-    [[nmcli -t -f NAME c s -a ; nmcli -t -f CONNECTIVITY g]],
-    60,
-    function()
-      update_wifi()
+  awesome.connect_signal(
+    "widget::network:update",
+    function(stdout)
+      wifi_widget:get_children_by_id('label')[1].text = stdout
     end
   )
 

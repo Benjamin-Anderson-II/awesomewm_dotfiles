@@ -1,8 +1,6 @@
-local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 local dpi = require("beautiful").xresources.apply_dpi
-local watch = awful.widget.watch
 
 return function()
   local disk_widget = wibox.widget {
@@ -29,21 +27,11 @@ return function()
     widget = wibox.container.background
   }
 
-  local function update_disk()
-    awful.spawn.easy_async_with_shell(
-      "echo  $(df -h | rg -U '/\\n' | sed -n 's/.* .* \\([0-9].*[A-Z]\\).*/\\1/p' | sed 's/.$//') GiB",
-      function(stdout)
-        disk_widget:get_children_by_id('label')[1].text = stdout
-      end
-    )
-  end
-
-  watch (
-    'echo a',
-    300,
-    function()
-      update_disk()
-   end
+  awesome.connect_signal(
+    "widget::disk:update",
+    function(stdout)
+      disk_widget:get_children_by_id("label")[1].text = stdout
+    end
   )
 
   return disk_widget

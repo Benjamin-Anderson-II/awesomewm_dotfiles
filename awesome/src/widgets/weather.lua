@@ -1,8 +1,6 @@
-local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 local dpi = require("beautiful").xresources.apply_dpi
-local watch = awful.widget.watch
 
 return function()
   local weather_widget = wibox.widget {
@@ -29,10 +27,9 @@ return function()
     widget = wibox.container.background
   }
 
-  watch (
-    'python ' .. Script_Dir .. "weather.py",
-    300,
-    function(_, stdout)
+  awesome.connect_signal(
+    "widget::weather:update",
+    function(stdout)
       weather_widget:get_children_by_id('label')[1].text = stdout
     end
   )
