@@ -10,7 +10,7 @@ local function set_wallpaper(s)
     if type(wallpaper) == 'function' then
       wallpaper = wallpaper(s)
     end
-    gears.wallpaper.maximized(wallpaper, s, true)
+    gears.wallpaper.maximized(wallpaper, s, false)
   end
 end
 
@@ -61,7 +61,7 @@ awful.screen.connect_for_each_screen(
       position = "top",
       screen = s,
       bg = gradient,
-      height = dpi(33)
+      height = dpi(35)
     })
 
     s.mywibox:setup {

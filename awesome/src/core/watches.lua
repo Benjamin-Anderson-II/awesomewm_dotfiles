@@ -4,7 +4,7 @@ local emit = awesome.emit_signal
 
 -- watch for all 2 second timers
 local second_timers = function()
-  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. 'cpu.sh',
+  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. 'get_non-idle_cpu.sh',
     function(stdout)
       emit("widget::cpu:update", stdout)
     end

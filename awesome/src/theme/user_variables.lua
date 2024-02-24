@@ -26,17 +26,29 @@ user_vars = {
   margin = 7,
 
   font = {
-    regular   = "Mononoki Nerd Font, 12",
-    bold      = "Mononoki Nerd Font, bold 12",
-    extrabold = "Mononoki Nerd Font, ExtraBold 12",
+    regular   = "Mononoki Nerd Font, 13",
+    bold      = "Mononoki Nerd Font, bold 13",
+    extrabold = "Mononoki Nerd Font, ExtraBold 13",
     specify   = "Mononoki Nerd Font"
   },
 
   terminal = "kitty",
 
   modkey = "Mod4",
-
-  wallpaper = Theme_Dir .. "minimal_arch.jpg",
+--[[
+  wallpapers = {
+    Theme_Dir .. "minimal_arch,jpg",
+    Theme_Dir .. "dungeon_meshi.png"
+  },
+]]--
+  --wallpaper = Theme_Dir .. "minimal_arch.jpg",
+  wallpaper = function(s)
+    local wallpapers = {
+      Theme_Dir .. "wallpapers/minimal_arch.jpg",
+      Theme_Dir .. "wallpapers/above-the-mountains.png",
+    }
+    return wallpapers[s.index]
+  end,
 
   namestyle = "userhost",
 

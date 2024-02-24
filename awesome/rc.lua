@@ -11,7 +11,7 @@ require("mappings.global_buttons")
 require("mappings.bind_to_tags")
 require("bar.init")
 
-awful.spawn.with_shell("picom -o 0")
+awful.spawn.with_shell("picom")
 -- awful.spawn.with_shell("autorandr -c")
 --[[gears.timer {
   timeout = 30,
