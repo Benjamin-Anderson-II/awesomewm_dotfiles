@@ -28,7 +28,7 @@ return function()
   }
 
   awesome.connect_signal(
-    "widgets::memory:update",
+    "widget::memory:update",
     function(stdout)
       memory_widget:get_children_by_id('label')[1].text = stdout
     end
