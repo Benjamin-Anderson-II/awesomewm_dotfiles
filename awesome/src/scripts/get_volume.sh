@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sink=$(pactl get-default-sink)
-vol=$(pactl get-sink-volume $sink | sed -n 's/.* \(.*%\).*/\1/p'|sed -n 's/%//p')
-mute=$(pactl get-sink-mute $sink | sed 's/Mute: //')
+vol=$(pactl get-sink-volume "$sink" | sed -n 's/.* \(.*\)%.*/\1/p')
+mute=$(pactl get-sink-mute "$sink" | sed 's/Mute: //')
 
 if [[ $mute == "yes" ]]; then
   echo "󰝟 $vol%"

@@ -17,13 +17,13 @@ elif [[ $1 == f ]]; then
 fi
 
 if [[ $temp_d -lt $low ]]; then
-  echo "" $temp
+  echo " $temp"
 elif [[ $temp_d -lt $mid ]]; then
-  echo "" $temp
+  echo " $temp"
 elif [[ $temp_d -lt $high ]]; then
-  echo "" $temp
+  echo " $temp"
 elif [[ $temp_d -lt $crit ]]; then
-  echo "" $temp
+  echo " $temp"
 else
-  echo "" $temp
+  echo " $temp"
 fi

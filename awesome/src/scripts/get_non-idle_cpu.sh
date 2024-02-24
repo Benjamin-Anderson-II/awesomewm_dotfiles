@@ -15,6 +15,6 @@ fi
 # put in current times
 echo $curr_cpu >> $last_cpu
 
-cat $last_cpu | tr '\n' ' ' | awk '{printf " %.2f%%\n", 100-(100*($3-$1))/($4-$2)}'
+cat $last_cpu | tr '\n' ' ' | awk '{printf " %05.2f%%\n", 100-(100*($3-$1))/($4-$2)}'
 
 sed -i '1d' $last_cpu

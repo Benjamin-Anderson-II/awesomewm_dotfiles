@@ -1,10 +1,7 @@
 #!/bin/bash
 
-sink=$(pactl get-default-sink)
-if [ $1 == '+' ]; then
-  pactl set-sink-volume $sink +5%
-elif [ $1 == '-' ]; then
-  pactl set-sink-volume $sink -5%
-elif [ $1 == '0' ]; then
-  pactl set-sink-mute $sink toggle
+if [ $1 == '0' ]; then
+  pactl set-sink-mute "$(pactl get-default-sink)" toggle
+else
+  pactl set-sink-volume "$(pactl get-default-sink)" "$1"5%
 fi
