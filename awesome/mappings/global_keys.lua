@@ -49,29 +49,29 @@ return gears.table.join(
 
 ---- SOUND ----
   awful.key({}, "XF86AudioRaiseVolume", function()
-    awful.util.spawn_with_shell('sh ' .. Script_Dir .. 'set_volume.sh +')
+    awful.spawn('sh ' .. Script_Dir .. 'set_volume.sh +')
     awesome.emit_signal("sound::volume:change")
   end,
   { description = "Raise Volume", group = "Sound"}),
   awful.key({}, "XF86AudioLowerVolume", function()
-    awful.util.spawn_with_shell('sh ' .. Script_Dir .. 'set_volume.sh -')
+    awful.spawn('sh ' .. Script_Dir .. 'set_volume.sh -')
     awesome.emit_signal("sound::volume:change")
   end,
   { description = "Lower Volume", group = "Sound"}),
   awful.key({}, "XF86AudioMute", function()
-    awful.util.spawn_with_shell('sh ' .. Script_Dir .. 'set_volume.sh 0')
+    awful.spawn('sh ' .. Script_Dir .. 'set_volume.sh 0')
     awesome.emit_signal("sound::volume:change")
   end,
   { description = "Mute", group = "Sound"}),
 
 ---- Brightness ----
   awful.key({}, "XF86MonBrightnessDown", function()
-    awful.util.spawn_with_shell("sh " .. Script_Dir .. "lower_brightness.sh")
+    awful.spawn("sh " .. Script_Dir .. "lower_brightness.sh")
     awesome.emit_signal("brightness::level:change")
   end,
   {description = "Lower Brightness", group = "Brightness"}),
   awful.key({}, "XF86MonBrightnessUp", function()
-    awful.util.spawn_with_shell("sh " .. Script_Dir .. "raise_brightness.sh")
+    awful.spawn("sh " .. Script_Dir .. "raise_brightness.sh")
     awesome.emit_signal("brightness::level:change")
   end,
   {description = "Lower Brightness", group = "Brightness"}),
