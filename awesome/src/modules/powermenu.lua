@@ -16,13 +16,11 @@ return function(s)
           },
           layout = wibox.layout.fixed.horizontal
         },
-        -- top    = dpi(7),
-        -- bottom = dpi(7),
-        margins = dpi(0),
-        widget = wibox.container.margin
+        fg = color,
+        widget = wibox.container.background
       },
-      fg = color,
-      widget = wibox.container.background
+      left = dpi(3),
+      widget = wibox.container.margin
     }
 
     item:connect_signal(
@@ -52,43 +50,46 @@ return function(s)
     awesome.emit_signal("module::powermenu:toggle")
   end
 
-  local shutdown_button = button("󰐥 Shut Down", "#f38ba8", shutdown_command)
-  local reboot_button = button("󰜉 Reboot", "#fab387", reboot_command)
-  local suspend_button = button("󰤄 Sleep", "#f9e2af", suspend_command)
+  local shutdown_button = button("󰐥 Shut Down", user_vars.colors.red, shutdown_command)
+  local reboot_button = button("󰜉 Reboot", user_vars.colors.peach, reboot_command)
+  local suspend_button = button("󰤄 Sleep", user_vars.colors.yellow, suspend_command)
 
   local powermenu = wibox.widget {
-    --{
-      {
-        shutdown_button,
-        reboot_button,
-        suspend_button,
-        spacing = dpi(5),
-        layout = wibox.layout.fixed.vertical
-      },
-      margins = dpi(5),
-      widget = wibox.container.margin
-    --},
-    --widget = wibox.container.background
+    {
+      shutdown_button,
+      reboot_button,
+      suspend_button,
+      spacing = dpi(5),
+      layout = wibox.layout.flex.vertical
+    },
+    margins = dpi(5),
+    widget = wibox.container.margin
   }
 
   local powermenu_container = wibox {
     border_width = 3,
-    border_color = "#cba6f7",
+    border_color = user_vars.colors.mauve,
     ontop   = true,
     visible = false,
     type    = "", -- TYPE NEEDS TO BE FIGURED OUT
-    x       = s.geometry.width - dpi(130),
-    y       = dpi(32),
     width   = dpi(120),
     height  = dpi(80),
     screen  = s,
     widget  = powermenu,
-    bg      = "#161925e6",
+    bg      = user_vars.colors.surface0,
     shape   = function(cr, width, height)
       gears.shape.rounded_rect(cr, width, height, 13)
     end,
     input_passthrough = true
   }
+
+  awful.placement.top_right(powermenu_container, {
+    parent = mouse.current_wibox,
+    margins = {
+      top = dpi(35),
+      right = dpi(3)
+    }
+  })
 
   local keygrabber_started = false
   local powermenu_keygrabber = awful.keygrabber {
@@ -110,17 +111,17 @@ return function(s)
   awesome.connect_signal(
     "module::powermenu:toggle",
     function()
-        if keygrabber_started then
-          powermenu_keygrabber:stop()
-          powermenu_container.visible = false
-          powermenu_container.input_passthrough = true
-        else
-          if s == mouse.screen then
-            powermenu_keygrabber:start()
-            powermenu_container.visible = true
-            powermenu_container.input_passthrough = false
-          end
+      if keygrabber_started then
+        powermenu_keygrabber:stop()
+        powermenu_container.visible = false
+        powermenu_container.input_passthrough = true
+      else
+        if s == mouse.screen then
+          powermenu_keygrabber:start()
+          powermenu_container.visible = true
+          powermenu_container.input_passthrough = false
         end
+      end
     end
   )
 end
