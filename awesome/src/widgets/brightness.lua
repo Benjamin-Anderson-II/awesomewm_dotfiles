@@ -1,30 +1,16 @@
 local awful = require("awful")
-local dpi   = require("beautiful").xresources.apply_dpi
-local gears = require("gears")
 local wibox = require("wibox")
 
 return function()
   local brightness_widget = wibox.widget {
     {
-      {
-        {
-          id = "icon",
-          align = "center",
-          valign = "center",
-          visible = true,
-          widget = wibox.widget.textbox
-        },
-        layout = wibox.layout.fixed.horizontal
-      },
-      left = dpi(user_vars.margin - 2),
-      right = dpi(user_vars.margin),
-      widget = wibox.container.margin
+      id = "icon",
+      align = "center",
+      valign = "center",
+      visible = true,
+      widget = wibox.widget.textbox
     },
     fg = user_vars.colors.peach,
-    bg = user_vars.colors.surface0,
-    shape = function(cr, width, height)
-      gears.shape.rectangle(cr, width, height)
-    end,
     widget = wibox.container.background
   }
 

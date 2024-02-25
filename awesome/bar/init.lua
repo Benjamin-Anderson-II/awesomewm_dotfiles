@@ -25,25 +25,40 @@ awful.screen.connect_for_each_screen(
     )
 
     require("src.modules.powermenu")(s)
+    local wp = "src.widgets."
+    local pill = require(wp.."pill")
 
-    s.mypower = require("src.widgets.power")()
     if s.index == 1 then
-      s.myclock = require("src.widgets.clock")(true)
+      s.myclock = require(wp.."clock")(true)
     else
-      s.myclock = require("src.widgets.clock")(false)
+      s.myclock = require(wp.."clock")(false)
     end
-    s.mybattery = require("src.widgets.battery")()
-    s.mywifi = require("src.widgets.wifi")()
-    s.mytaglist = require("src.widgets.taglist")(s)
-    s.mysound = require("src.widgets.sound")()
-    s.mydisk = require("src.widgets.disk")()
 
-    -- [[ Stopped Working, not worth fixing ]]--
-    s.myweather = require("src.widgets.weather")()
-    s.mybrightness = require("src.widgets.brightness")()
-    s.mymemory = require("src.widgets.memory")()
-    s.mycpu = require("src.widgets.cpu")()
-    s.mytemp = require("src.widgets.tempurature")()
+    s.mypower   = require(wp.."power")()
+    s.mytaglist = require(wp.."taglist")(s)
+
+    -- controllable widgets
+    s.mysound      = require(wp.."sound")()
+    s.mybrightness = require(wp.."brightness")()
+
+    -- watcher widgets
+    s.mybattery = require(wp.."battery")()
+    s.mywifi    = require(wp.."wifi")()
+    s.mydisk    = require(wp.."disk")()
+    s.myweather = require(wp.."weather")()
+    s.mymemory  = require(wp.."memory")()
+    s.mycpu     = require(wp.."cpu")()
+    s.mytemp    = require(wp.."temperature")()
+
+    s.pill1 = pill({ s.mycpu, s.mymemory, s.mytemp, s.mydisk })
+    s.pill2 = pill({ s.mywifi })
+    s.pill3 = pill({ s.mysound, s.mybrightness, s.mybattery })
+    s.pill4 = pill({ s.myclock })
+    s.pill5 = pill({ s.myweather })
+    s.pill_power = pill({ s.mypower })
+
+    s.pill_power:get_children_by_id('m')[1].left = math.floor(user_vars.margin * 1.5)
+    s.pill_power:get_children_by_id('m')[1].right = dpi(1)
 
     local gradient = gears.color{
       type = "linear",
@@ -64,6 +79,11 @@ awful.screen.connect_for_each_screen(
       height = dpi(35)
     })
 
+    --[[TODO
+      restructure widgets so that pills are 1 widget & everything goes inside of them
+      maybe make a template widget for watch-type widgets and script-type widgets, since they're so similar
+    ]]--
+
     s.mywibox:setup {
       nil,
       {
@@ -77,21 +97,18 @@ awful.screen.connect_for_each_screen(
           },
           {
             {
-              s.mycpu,
-              s.mymemory,
-              s.mytemp,
-              s.mydisk,
-              s.mywifi,
+              s.pill1,
+              s.pill2,
+              spacing = dpi(user_vars.distance),
               layout = wibox.layout.fixed.horizontal
             },
             nil,
             {
-              s.mysound,
-              s.mybrightness,
-              s.mybattery,
-              s.myclock,
-              s.myweather,
-              s.mypower,
+              s.pill3,
+              s.pill4,
+              s.pill5,
+              s.pill_power,
+              spacing = user_vars.distance,
               layout = wibox.layout.fixed.horizontal
             },
             layout = wibox.layout.align.horizontal

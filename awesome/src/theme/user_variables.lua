@@ -43,11 +43,32 @@ user_vars = {
 ]]--
   --wallpaper = Theme_Dir .. "minimal_arch.jpg",
   wallpaper = function(s)
-    local wallpapers = {
-      Theme_Dir .. "wallpapers/minimal_arch.jpg",
-      Theme_Dir .. "wallpapers/above-the-mountains.png",
+    local wpdir = Theme_Dir .. "wallpapers/"
+    --if s.index == 1 then
+    --  return wpdir .. "minimal_arch.jpg"
+    --end
+
+    local os  = {clock = os.clock }
+    local Gio = require("lgi").Gio
+    math.randomseed(os.clock() % 1 * 1e6)
+
+    local images_in_path = {}
+    local valid_image_ext = {
+      ["jpg"]  = 1,
+      ["jpeg"] = 1,
+      ["png"]  = 1,
+      ["bmp"]  = 1
     }
-    return wallpapers[s.index]
+    local enumerator = Gio.File.new_for_path(wpdir):enumerate_children("standard::name", 0)
+
+    for file in function() return enumerator:next_file() end do
+      local file_name = file:get_attribute_as_string("standard::name")
+      if valid_image_ext[file_name:lower():match("%.(.*)$")] then
+        table.insert(images_in_path, file_name)
+      end
+    end
+
+    return wpdir .. images_in_path[math.random(#images_in_path)]
   end,
 
   namestyle = "userhost",

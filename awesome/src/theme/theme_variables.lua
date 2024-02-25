@@ -5,7 +5,7 @@ theme.font = user_vars.font.bold
 
 theme.bg_normal = "#161925e6"
 theme.fg_normal = "#94e2d5"
-theme.taglist_bg_occupied = "#161925e6"
+theme.taglist_bg_occupied = "#00000000"
 theme.taglist_bg_focus  = "#ea759b"
 theme.taglist_fg_focus  = "#45475a"
 theme.taglist_shape = function(cr, width, height)

@@ -1,7 +1,8 @@
 local wibox = require("wibox")
 
 return function()
-  local cpu_widget = wibox.widget {
+  local temp_widget = wibox.widget {
+    id = "label",
     align = "center",
     valign = "center",
     visible = true,
@@ -9,11 +10,11 @@ return function()
   }
 
   awesome.connect_signal(
-    "widget::cpu:update",
+    "widget::temperature:update",
     function(stdout)
-      cpu_widget.markup = "<span foreground = '" .. user_vars.colors.lavender .. "'>" .. stdout .. "</span>"
+      temp_widget.markup = "<span foreground = '" .. user_vars.colors.red .. "'>" .. stdout .. "</span>"
     end
   )
 
-  return cpu_widget
+  return temp_widget
 end

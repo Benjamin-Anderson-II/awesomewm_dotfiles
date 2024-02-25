@@ -6,7 +6,7 @@ local modkey = user_vars.modkey
 
 return gears.table.join(
 ---- AWESOME ----
-  awful.key({ modkey }, "Esc", hotkeys_popup.show_help,
+  awful.key({ modkey }, "Escape", hotkeys_popup.show_help,
   { description = "Cheat Sheet", group = "Awesome" }),
   awful.key({ modkey, "Shift" }, "q",
     awesome.quit,
