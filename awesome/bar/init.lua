@@ -49,8 +49,9 @@ awful.screen.connect_for_each_screen(
     s.mymemory  = require(wp.."memory")()
     s.mycpu     = require(wp.."cpu")()
     s.mytemp    = require(wp.."temperature")()
+    s.mygpu     = require(wp.."gpu")()
 
-    s.pill1 = pill({ s.mycpu, s.mymemory, s.mytemp, s.mydisk })
+    s.pill1 = pill({ s.mycpu, s.mygpu, s.mymemory, s.mytemp, s.mydisk })
     s.pill2 = pill({ s.mywifi })
     s.pill3 = pill({ s.mysound, s.mybrightness, s.mybattery })
     s.pill4 = pill({ s.myclock })

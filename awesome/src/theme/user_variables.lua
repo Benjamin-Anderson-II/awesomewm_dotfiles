@@ -43,7 +43,7 @@ user_vars = {
 ]]--
   --wallpaper = Theme_Dir .. "minimal_arch.jpg",
   wallpaper = function(s)
-    local wpdir = Theme_Dir .. "wallpapers/"
+    local wpdir = Theme_Dir .. "wallpapers/catppuccin/"
     --if s.index == 1 then
     --  return wpdir .. "minimal_arch.jpg"
     --end

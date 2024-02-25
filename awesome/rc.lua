@@ -11,6 +11,7 @@ require("mappings.global_buttons")
 require("mappings.bind_to_tags")
 require("bar.init")
 
+os.execute("xset r rate 220 30")
 awful.spawn.with_shell("picom")
 -- awful.spawn.with_shell("autorandr -c")
 --[[gears.timer {

@@ -71,8 +71,8 @@ return function(s)
     border_color = user_vars.colors.mauve,
     ontop   = true,
     visible = false,
-    type    = "", -- TYPE NEEDS TO BE FIGURED OUT
-    width   = dpi(120),
+    type    = "dock", -- TYPE NEEDS TO BE FIGURED OUT
+    width   = dpi(150),
     height  = dpi(80),
     screen  = s,
     widget  = powermenu,
