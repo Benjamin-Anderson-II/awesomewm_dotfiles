@@ -15,7 +15,7 @@ return function(short)
       format = form,
       widget = wibox.widget.textclock
     },
-    fg = user_vars.colors.flamingo,
+    fg = user_vars.colors.text,
     widget = wibox.container.background
   }
 end

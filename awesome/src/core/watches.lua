@@ -53,6 +53,6 @@ local five_min_timers = function()
 end
 
 watch("autorandr -c > /dev/null 2>&1", 5)
-watch('echo a > /dev/null', 1, second_timers)
+watch('echo a > /dev/null', 2, second_timers)
 watch('echo a > /dev/null', 60, minute_timers)
 watch('echo a > /dev/null', 300, five_min_timers)

@@ -78,9 +78,9 @@ return gears.table.join(
 
 ---- Screenshot ----
   awful.key({}, "Print", function()
-    awful.util.spawn_with_shell("scrot -F '%Y-%m-%d_$wx$h.png' -s -e 'optipng $f; mkdir -p ~/Pictures/screenshots; mv $f ~/Pictures/screenshots/'")
+    awful.spawn('sh ' .. Script_Dir .. 'screenshot.sh')
   end,
-  { description = "Screenshot focused window", group = "Screenshot" }),
+  { description = "Screenshot area", group = "Screenshot" }),
 
 ---- LAUNCHERS ----
   awful.key({ modkey }, "r", function()
