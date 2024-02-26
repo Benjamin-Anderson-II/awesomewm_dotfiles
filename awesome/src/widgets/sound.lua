@@ -20,15 +20,15 @@ return function()
 
   sound_widget:buttons(awful.util.table.join(
     awful.button({}, 1, function()
-      awful.util.spawn("sh " .. Script_Dir .. "set_volume.sh 0")
+      awful.spawn("sh " .. Script_Dir .. "set_volume.sh 0")
       awesome.emit_signal("sound::volume:change")
     end),
     awful.button({}, 4, function()
-      awful.util.spawn("sh " .. Script_Dir .. "set_volume.sh +")
+      awful.spawn("sh " .. Script_Dir .. "set_volume.sh +")
       awesome.emit_signal("sound::volume:change")
     end),
     awful.button({}, 5, function()
-      awful.util.spawn("sh " .. Script_Dir .. "set_volume.sh -")
+      awful.spawn("sh " .. Script_Dir .. "set_volume.sh -")
       awesome.emit_signal("sound::volume:change")
     end)
   ))

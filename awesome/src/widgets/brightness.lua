@@ -24,11 +24,11 @@ return function()
 
   brightness_widget:buttons(awful.util.table.join(
     awful.button({}, 4, function()
-      awful.util.spawn("sh " .. Script_Dir .. "raise_brightness.sh")
+      awful.spawn("sh " .. Script_Dir .. "raise_brightness.sh")
       awesome.emit_signal("brightness::level:change")
     end),
     awful.button({}, 5, function()
-      awful.util.spawn("sh " .. Script_Dir .. "lower_brightness.sh")
+      awful.spawn("sh " .. Script_Dir .. "lower_brightness.sh")
       awesome.emit_signal("brightness::level:change")
     end)
   ))
