@@ -1,11 +1,24 @@
 return {
   'neovim/nvim-lspconfig',
 --  event = "VeryLazy",
-  ft = {"lua", "py", "make", "c", "ruby"},
+  ft = {"lua", "python", "make", "c", "ruby"},
   config = function ()
     local lspconfig = require("lspconfig")
     lspconfig.pyright.setup{}
-    lspconfig.pylsp.setup{}
+    lspconfig.pylsp.setup{
+      settings = {
+        configurationSources = {"flake8"},
+        pylsp = {
+          plugins = {
+            flake8 = {
+              enabled = true,
+              maxLineLength = 127,
+              maxComplexity = 10,
+            }
+          }
+        }
+      }
+    }
     lspconfig.lua_ls.setup{}
     lspconfig.clangd.setup{}
     lspconfig.autotools_ls.setup{}

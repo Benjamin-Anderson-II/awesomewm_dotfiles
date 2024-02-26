@@ -3,9 +3,9 @@ local wibox = require("wibox")
 return function(short)
   local form = ""
   if short then
-    form = "󰥔 %I:%M 󰃭 %a"
+    form = " %I:%M 󰃭 %a"
   else
-    form = "󰥔 %I:%M%P 󰃭 %a: %b %d"
+    form = " %I:%M%P 󰃭 %a: %b %d"
   end
   return wibox.widget {
     {

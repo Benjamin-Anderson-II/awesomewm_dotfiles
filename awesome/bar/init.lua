@@ -55,9 +55,10 @@ awful.screen.connect_for_each_screen(
     s.pill2 = pill({ s.mywifi })
     s.pill3 = pill({ s.mysound, s.mybrightness, s.mybattery })
     s.pill4 = pill({ s.myclock })
-    s.pill5 = pill({ s.myweather })
+    s.pill_weather = pill({ s.myweather })
     s.pill_power = pill({ s.mypower })
 
+    s.pill_weather:get_children_by_id('m')[1].left = dpi(0)
     s.pill_power:get_children_by_id('m')[1].left = math.floor(user_vars.margin * 1.5)
     s.pill_power:get_children_by_id('m')[1].right = dpi(1)
 
@@ -107,7 +108,7 @@ awful.screen.connect_for_each_screen(
             {
               s.pill3,
               s.pill4,
-              s.pill5,
+              s.pill_weather,
               s.pill_power,
               spacing = user_vars.distance,
               layout = wibox.layout.fixed.horizontal
