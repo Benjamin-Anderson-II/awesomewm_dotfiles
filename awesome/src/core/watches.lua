@@ -2,54 +2,31 @@ local awful = require("awful")
 local watch = awful.widget.watch
 local emit = awesome.emit_signal
 
+local _helper = function(script, sig_name)
+  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. script,
+    function(stdout)
+      emit("widget::"..sig_name..":update", stdout)
+    end
+  )
+end
+
 -- watch for all 1 second timers
 local second_timers = function()
-  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. 'get_non-idle_cpu.sh',
-    function(stdout)
-      emit("widget::cpu:update", stdout)
-    end
-  )
-  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. 'get_memory.sh g',
-    function(stdout)
-      emit("widget::memory:update", stdout)
-    end
-  )
-  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. 'get_temp.sh c',
-    function(stdout)
-      emit("widget::temperature:update", stdout)
-    end
-  )
-  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. 'get_battery.sh',
-    function(stdout)
-      emit("widget::battery:update", stdout)
-    end
-  )
-  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. 'get_gpu.sh',
-    function(stdout)
-      emit("widget::gpu:update", stdout)
-    end
-  )
+  _helper('get_non-idle_cpu.sh', 'cpu')
+  _helper('get_memory.sh g', 'memory')
+  _helper('get_temp.sh c', 'temperature')
+  _helper('get_battery.sh', 'battery')
+  _helper('get_gpu.sh', 'gpu')
+  _helper('get_clock.sh', 'clock')
 end
 
 local minute_timers = function()
-  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. 'network.sh',
-    function(stdout)
-      emit("widget::network:update", stdout)
-    end
-  )
+  _helper('network.sh', 'network')
 end
 
 local five_min_timers = function()
-  awful.spawn.easy_async_with_shell('python ' .. Script_Dir .. 'weather.py',
-    function(stdout)
-      emit("widget::weather:update", stdout)
-    end
-  )
-  awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. 'get_disk.sh',
-    function(stdout)
-      emit("widget::disk:update", stdout)
-    end
-  )
+  _helper('weather_wrapper.sh', 'weather')
+  _helper('get_disk.sh', 'disk')
 end
 
 watch("autorandr -c > /dev/null 2>&1", 5)

@@ -25,8 +25,11 @@ awful.screen.connect_for_each_screen(
     )
 
     require("src.modules.powermenu")(s)
-    local wp = "src.widgets."
+    local wp   = "src.widgets."
     local pill = require(wp.."pill")
+    local wt   = require(wp.."watch_template")
+    local cols = user_vars.colors
+    local sig  = function(str) return "widget::"..str..":update" end
 
     if s.index == 1 then
       s.myclock = require(wp.."clock")(true)
@@ -42,14 +45,14 @@ awful.screen.connect_for_each_screen(
     s.mybrightness = require(wp.."brightness")()
 
     -- watcher widgets
-    s.mybattery = require(wp.."battery")()
-    s.mywifi    = require(wp.."wifi")()
-    s.mydisk    = require(wp.."disk")()
-    s.myweather = require(wp.."weather")()
-    s.mymemory  = require(wp.."memory")()
-    s.mycpu     = require(wp.."cpu")()
-    s.mytemp    = require(wp.."temperature")()
-    s.mygpu     = require(wp.."gpu")()
+    s.mybattery = wt(cols.green,    sig "battery")
+    s.mywifi    = wt(cols.blue,     sig "network")
+    s.mydisk    = wt(cols.peach,    sig "disk")
+    s.myweather = wt(cols.yellow,   sig "weather")
+    s.mymemory  = wt(cols.sapphire, sig "memory")
+    s.mycpu     = wt(cols.lavender, sig "cpu")
+    s.mytemp    = wt(cols.red,      sig "temperature")
+    s.mygpu     = wt(cols.green,    sig "gpu")
 
     s.pill1 = pill({ s.mycpu, s.mygpu, s.mymemory, s.mytemp, s.mydisk })
     s.pill2 = pill({ s.mywifi })
@@ -80,11 +83,6 @@ awful.screen.connect_for_each_screen(
       bg = gradient,
       height = dpi(35)
     })
-
-    --[[TODO
-      restructure widgets so that pills are 1 widget & everything goes inside of them
-      maybe make a template widget for watch-type widgets and script-type widgets, since they're so similar
-    ]]--
 
     s.mywibox:setup {
       nil,
@@ -126,9 +124,5 @@ awful.screen.connect_for_each_screen(
       nil,
       layout = wibox.layout.align.horizontal,
     }
-
-    -- Note:
-    -- if you want to have different widgets for different screens use
-    -- `if s.index == 1 then` <- this referring to the laptop screen
   end
 )

@@ -1,21 +1,24 @@
 local wibox = require("wibox")
 
 return function(short)
-  local form = ""
-  if short then
-    form = " %I:%M 󰃭 %a"
-  else
-    form = " %I:%M%P 󰃭 %a: %b %d"
-  end
-  return wibox.widget {
-    {
-      id = "label",
-      align = "center",
-      valign = "center",
-      format = form,
-      widget = wibox.widget.textclock
-    },
-    fg = user_vars.colors.text,
-    widget = wibox.container.background
+  local clock_widget = wibox.widget {
+    id = "label",
+    align = "center",
+    valign = "center",
+    visible = true,
+    widget = wibox.widget.textbox
   }
+
+  awesome.connect_signal(
+    "widget::clock:update",
+    function(stdout)
+      if short then
+        stdout = string.gsub(stdout, "(.*):.*", "%1")
+        stdout = string.gsub(stdout, "am", "")
+      end
+      clock_widget.markup = "<span foreground = '" .. user_vars.colors.text .. "'>" .. stdout .. "</span>"
+    end
+  )
+
+  return clock_widget
 end

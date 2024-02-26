@@ -1,7 +1,8 @@
 local wibox = require("wibox")
 
-return function()
-  local gpu_widget = wibox.widget {
+return function(color, signal)
+  color = color or user_vars.colors.text
+  local w = wibox.widget {
     id = "label",
     align = "center",
     valign = "center",
@@ -10,11 +11,11 @@ return function()
   }
 
   awesome.connect_signal(
-    "widget::gpu:update",
+    signal,
     function(stdout)
-      gpu_widget.markup = "<span foreground = '" .. user_vars.colors.green .. "'>" .. stdout .. "</span>"
+      w.markup = "<span foreground = '" .. color .. "'>" .. stdout .. "</span>"
     end
   )
 
-  return gpu_widget
+  return w
 end
