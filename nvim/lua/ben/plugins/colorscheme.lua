@@ -3,7 +3,7 @@ return {
 	priority = 1000,
 	name = "catppuccin",
 	config = function()
-		vim.g.catppuccin_flavour = "macchiato",
+		vim.g.catppuccin_flavor = "macchiato"
 		vim.cmd([[colorscheme catppuccin]])
 	end,
 }

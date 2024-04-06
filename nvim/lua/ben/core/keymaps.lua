@@ -14,11 +14,15 @@ map('n', '<C-n>', ':NvimTreeToggle<enter>', opts)
 
 -- Open Telescope
 map('n', '<C-f>', ':Telescope live_grep<enter>', opts)
-map('n', '<C-Space>', ':lua require("telescope.builtin").find_files({ hidden = true })<enter>', opts)
+map('n', '<C-enter>', ':lua require("telescope.builtin").find_files({ hidden = true })<enter>', opts)
 
 -- Crtl-Backspace
 map('i', "<C-BS>", "<C-w>", opts)
 map('n', "<C-BS>", "db", opts)
+
+-- Git gutter
+map('n', "]h", "<Plug>(GitGutterNextHunk)", opts)
+map('n', "[h", "<Plug>(GitGutterPrevHunk)", opts)
 
 --[[    barbar    ]]--
 

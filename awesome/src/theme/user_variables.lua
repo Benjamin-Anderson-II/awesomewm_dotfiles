@@ -94,10 +94,10 @@ user_vars = {
   margin = 7,
 
   font = {
-    regular   = "Mononoki Nerd Font, 13",
-    bold      = "Mononoki Nerd Font, bold 13",
-    extrabold = "Mononoki Nerd Font, ExtraBold 13",
-    specify   = "Mononoki Nerd Font"
+    regular   = "Mononoki Nerd Font 13",
+    bold      = "Mononoki Nerd Font bold 13",
+    extrabold = "Mononoki Nerd Font ExtraBold 13",
+    specify   = "Mononoki Nerd Font "
   },
 
   terminal = "kitty",
@@ -149,6 +149,7 @@ user_vars = {
     firefox = "󰈹",
     kitty   = "󰆍",
     mpv     = "",
+    obs     = "󰑋";
     dne     = "󰋗",
   },
 

@@ -12,10 +12,7 @@ require("mappings.bind_to_tags")
 require("bar.init")
 
 os.execute("xset r rate 220 30")
-awful.spawn.with_shell("picom")
--- awful.spawn.with_shell("autorandr -c")
---[[gears.timer {
-  timeout = 30,
-  autostart = true,
-  callback = function() collectgarbage() end
-}]]--
+awful.spawn.with_shell("fcitx5")
+awful.spawn("picom")
+awful.spawn("kitty nvim vimwiki/index.wiki")
+awful.spawn("kitty sudo pacman -Syu")

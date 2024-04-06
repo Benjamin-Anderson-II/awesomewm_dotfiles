@@ -22,11 +22,11 @@ return gears.table.join(
     { description = "Close focused client", group = "Client" }
   ),
 -- Move Around Current Client
-  awful.key({ modkey, "Shift" }, "j", function () 
+  awful.key({ modkey, "Shift" }, "j", function ()
     awful.client.swap.byidx(1)
   end,
   {description = "swap with next client by index", group = "Client"}),
-  awful.key({ modkey, "Shift" }, "k", function () 
+  awful.key({ modkey, "Shift" }, "k", function ()
     awful.client.swap.byidx(-1)
   end,
   {description = "swap with previous client by index", group = "Client"}),

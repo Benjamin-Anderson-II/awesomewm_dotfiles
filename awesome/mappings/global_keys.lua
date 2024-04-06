@@ -23,13 +23,22 @@ return gears.table.join(
   awful.key({ "Mod1", "Control" }, "Tab", function()
     awful.screen.focus_relative(1)
   end,
-  { description = "Alt Tab", group = "Client" }),
+  { description = "Change Screen", group = "Screen" }),
+  awful.key({ "Mod1" }, "Escape",
+    function()
+      awesome.emit_signal("sidebar::toggle", awful.screen.focused())
+    end,
+  { description = "toggle sidebar", group = "Panels" }),
 
 ---- APPLICATIONS ----
   awful.key({ modkey }, "space", function()
     awful.spawn(user_vars.terminal)
   end,
   { description = "Open Terminal", group = "Application" }),
+  awful.key({ modkey }, "u", function()
+    awful.spawn("kitty sudo pacman -Syu")
+  end,
+  { description = "Update Pacman", group = "Application" }),
   awful.key({ modkey }, "b", function()
     awful.util.spawn("firefox")
   end,

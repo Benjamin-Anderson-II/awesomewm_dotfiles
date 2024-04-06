@@ -24,7 +24,10 @@ awful.screen.connect_for_each_screen(
       user_vars.layouts[1]
     )
 
+--    local music = require("src.widgets.music")
+
     require("src.modules.powermenu")(s)
+    require("src.modules.sidebar")(s)
     local wp   = "src.widgets."
     local pill = require(wp.."pill")
     local wt   = require(wp.."watch_template")
@@ -71,8 +74,8 @@ awful.screen.connect_for_each_screen(
       to = { 0, 25 },
       stops = {
         { 0,   user_vars.colors.base },
-        { 0.3, user_vars.colors.base .. "77" },
-        { 0.6, user_vars.colors.base .. "33" },
+        { 0.33, user_vars.colors.base .. "77" },
+        { 0.67, user_vars.colors.base .. "33" },
         { 1,   user_vars.colors.base .. "00" },
       }
     }
@@ -81,7 +84,7 @@ awful.screen.connect_for_each_screen(
       position = "top",
       screen = s,
       bg = gradient,
-      height = dpi(35)
+      height = beautiful.wibar_height,
     })
 
     s.mywibox:setup {

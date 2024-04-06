@@ -7,13 +7,16 @@ return {
     lspconfig.pyright.setup{}
     lspconfig.pylsp.setup{
       settings = {
-        configurationSources = {"flake8"},
+        configurationSources = {"pycodestyle", "flake8"},
         pylsp = {
           plugins = {
             flake8 = {
               enabled = true,
               maxLineLength = 127,
               maxComplexity = 10,
+            },
+            pycodestyle = {
+              maxLineLength = 127
             }
           }
         }
@@ -24,6 +27,5 @@ return {
     lspconfig.autotools_ls.setup{}
     lspconfig.asm_lsp.setup{}
     lspconfig.ruby_ls.setup{}
---    lspconfig.rust_analyzer.setup{}
   end
 }

@@ -9,7 +9,11 @@ return {
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-nvim-lsp-signature-help",
     "saadparwaiz1/cmp_luasnip",
-    "windwp/nvim-autopairs",
+    {
+      "windwp/nvim-autopairs",
+      event = "InsertEnter",
+      config = true,
+    },
     {
       "L3MON4D3/LuaSnip",
       build = "make install_jsregexp",
@@ -46,7 +50,7 @@ return {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             -- replace select_next_item() with confirm({select = true}) for VSCode style autocomplete
-            cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+            cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert})
 
           elseif luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
@@ -67,7 +71,7 @@ return {
         end, {"i", "s"}),
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.abort(),
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
       }),
 
       sources = cmp.config.sources({

@@ -1,11 +1,11 @@
 local awful = require("awful")
 local watch = awful.widget.watch
-local emit = awesome.emit_signal
+
 
 local _helper = function(script, sig_name)
   awful.spawn.easy_async_with_shell('sh ' .. Script_Dir .. script,
     function(stdout)
-      emit("widget::"..sig_name..":update", stdout)
+      awesome.emit_signal("widget::"..sig_name..":update", stdout)
     end
   )
 end
@@ -17,11 +17,11 @@ local second_timers = function()
   _helper('get_temp.sh c', 'temperature')
   _helper('get_battery.sh', 'battery')
   _helper('get_gpu.sh', 'gpu')
-  _helper('get_clock.sh', 'clock')
 end
 
 local minute_timers = function()
   _helper('network.sh', 'network')
+  _helper('get_clock.sh', 'clock')
 end
 
 local five_min_timers = function()

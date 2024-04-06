@@ -21,6 +21,8 @@ theme.border_width = dpi(1)
 theme.border_normal = color.subtext1
 theme.border_focus  = color.red
 
+theme.wibar_height = dpi(35)
+
 -- Notification Related Settings
 nconf.spacing = 8
 --naughty defaults

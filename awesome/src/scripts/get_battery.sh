@@ -1,52 +1,54 @@
-level=$(acpi -b | sed -n 's/.* \(.*\)%.*/\1/p')
-charging=$(acpi -b | sed -n 's/.*: \([^,]*\),.*/\1/p')
+level=$(cat /sys/class/power_supply/BAT1/capacity)
+charging=$(cat /sys/class/power_supply/BAT1/status)
 
 if [[ "$charging" == Charging ]]; then
   if   [[ "$level" -eq 100 ]]; then
-    echo "󰂅 $level%"
+    icon="󰂅 "
   elif [[ "$level" -gt 90 ]]; then
-    echo "󰂋 $level%"
+    icon="󰂋 "
   elif [[ "$level" -gt 80 ]]; then
-    echo "󰂊 $level%"
+    icon="󰂊 "
   elif [[ "$level" -gt 70 ]]; then
-    echo "󰢞 $level%"
+    icon="󰢞 "
   elif [[ "$level" -gt 60 ]]; then
-    echo "󰂉 $level%"
+    icon="󰂉 "
   elif [[ "$level" -gt 50 ]]; then
-    echo "󰢝 $level%"
+    icon="󰢝 "
   elif [[ "$level" -gt 40 ]]; then
-    echo "󰂈 $level%"
+    icon="󰂈 "
   elif [[ "$level" -gt 30 ]]; then
-    echo "󰂇 $level%"
+    icon="󰂇 "
   elif [[ "$level" -gt 20 ]]; then
-    echo "󰂆 $level%"
+    icon="󰂆 "
   elif [[ "$level" -gt 10 ]]; then
-    echo "󰢜 $level%"
+    icon="󰢜 "
   else
-    echo "󰢟 $level%"
+    icon="󰢟 "
   fi
 else 
   if   [[ "$level" -eq 100 ]]; then
-    echo "󰁹 $level%"
+    icon="󰁹 "
   elif [[ "$level" -gt 90 ]]; then
-    echo "󰂂 $level%"
+    icon="󰂂 "
   elif [[ "$level" -gt 80 ]]; then
-    echo "󰂁 $level%"
+    icon="󰂁 "
   elif [[ "$level" -gt 70 ]]; then
-    echo "󰂀 $level%"
+    icon="󰂀 "
   elif [[ "$level" -gt 60 ]]; then
-    echo "󰁿 $level%"
+    icon="󰁿 "
   elif [[ "$level" -gt 50 ]]; then
-    echo "󰁾 $level%"
+    icon="󰁾 "
   elif [[ "$level" -gt 40 ]]; then
-    echo "󰁽 $level%"
+    icon="󰁽 "
   elif [[ "$level" -gt 30 ]]; then
-    echo "󰁼 $level%"
+    icon="󰁼 "
   elif [[ "$level" -gt 20 ]]; then
-    echo "󰁻 $level%"
+    icon="󰁻 "
   elif [[ "$level" -gt 10 ]]; then
-    echo "󰁺 $level%"
+    icon="󰁺 "
   else
-    echo "󰂎 $level%"
+    icon="󰂎 "
   fi
 fi
+
+echo "$icon$level%"

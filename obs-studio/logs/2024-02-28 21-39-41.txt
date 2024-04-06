@@ -1,0 +1,821 @@
+21:39:41.154: Using EGL/X11
+21:39:41.154: CPU Name: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+21:39:41.154: CPU Speed: 4099.292MHz
+21:39:41.155: Physical Cores: 6, Logical Cores: 12
+21:39:41.155: Physical Memory: 31941MB Total, 23384MB Free
+21:39:41.155: Kernel Version: Linux 6.7.6-arch1-1
+21:39:41.155: Distribution: "Arch Linux" Unknown
+21:39:41.155: Session Type: tty
+21:39:41.155: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.21.1
+21:39:41.155: Qt Version: 6.6.2 (runtime), 6.6.2 (compiled)
+21:39:41.155: Portable mode: false
+21:39:41.186: OBS 30.0.2-4 (linux)
+21:39:41.186: ---------------------------------
+21:39:41.186: ---------------------------------
+21:39:41.186: audio settings reset:
+21:39:41.186: 	samples per sec: 48000
+21:39:41.186: 	speakers:        2
+21:39:41.186: 	max buffering:   960 milliseconds
+21:39:41.186: 	buffering type:  dynamically increasing
+21:39:41.188: ---------------------------------
+21:39:41.188: Initializing OpenGL...
+21:39:41.279: Loading up OpenGL on adapter Intel Mesa Intel(R) UHD Graphics 630 (CFL GT2)
+21:39:41.279: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 24.0.1-arch1.1, shading language 4.60
+21:39:41.305: ---------------------------------
+21:39:41.305: video settings reset:
+21:39:41.305: 	base resolution:   1920x1080
+21:39:41.305: 	output resolution: 1280x720
+21:39:41.305: 	downscale filter:  Bicubic
+21:39:41.305: 	fps:               30/1
+21:39:41.305: 	format:            NV12
+21:39:41.305: 	YUV mode:          Rec. 709/Partial
+21:39:41.306: NV12 texture support not available
+21:39:41.306: P010 texture support not available
+21:39:41.311: Audio monitoring device:
+21:39:41.311: 	name: Default
+21:39:41.311: 	id: default
+21:39:41.312: ---------------------------------
+21:39:41.320: Failed to load 'en-US' text for module: 'decklink-captions.so'
+21:39:41.329: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+21:39:41.336: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+21:39:41.336: Failed to initialize module 'decklink.so'
+21:39:41.439: [pipewire] No captures available
+21:39:41.456: v4l2loopback not installed, virtual camera disabled
+21:39:41.495: NVENC supported
+21:39:41.651: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+21:39:41.651: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+21:39:41.651: FFmpeg VAAPI H264 encoding not supported
+21:39:41.652: VAAPI: Failed to initialize display in vaapi_device_hevc_supported
+21:39:41.652: VAAPI: Failed to initialize display in vaapi_device_hevc_supported
+21:39:41.652: FFmpeg VAAPI HEVC encoding not supported
+21:39:41.664: os_dlopen(/usr//lib/obs-plugins/obs-libfdk.so->/usr//lib/obs-plugins/obs-libfdk.so): libfdk-aac.so.2: cannot open shared object file: No such file or directory
+21:39:41.664: 
+21:39:41.667: os_dlopen(/usr//lib/obs-plugins/obs-libfdk.so->/usr//lib/obs-plugins/obs-libfdk.so): libfdk-aac.so.2: cannot open shared object file: No such file or directory
+21:39:41.667: 
+21:39:41.667: Module '/usr//lib/obs-plugins/obs-libfdk.so' not loaded
+21:39:41.721: ---------------------------------
+21:39:41.721:   Loaded Modules:
+21:39:41.721:     text-freetype2.so
+21:39:41.721:     rtmp-services.so
+21:39:41.721:     obs-x264.so
+21:39:41.721:     obs-webrtc.so
+21:39:41.721:     obs-vst.so
+21:39:41.721:     obs-transitions.so
+21:39:41.721:     obs-qsv11.so
+21:39:41.721:     obs-outputs.so
+21:39:41.721:     obs-filters.so
+21:39:41.721:     obs-ffmpeg.so
+21:39:41.721:     linux-v4l2.so
+21:39:41.721:     linux-pulseaudio.so
+21:39:41.721:     linux-pipewire.so
+21:39:41.721:     linux-jack.so
+21:39:41.721:     linux-capture.so
+21:39:41.721:     linux-alsa.so
+21:39:41.721:     image-source.so
+21:39:41.721:     frontend-tools.so
+21:39:41.721:     decklink-output-ui.so
+21:39:41.721:     decklink-captions.so
+21:39:41.721: ---------------------------------
+21:39:41.721: ==== Startup complete ===============================================
+21:39:41.763: All scene data cleared
+21:39:41.763: ------------------------------------------------
+21:39:41.765: pulse-input: Server name: 'pulseaudio 17.0'
+21:39:41.765: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+21:39:41.765: pulse-input: Started recording from 'alsa_output.usb-SteelSeries_SteelSeries_Arctis_5_00000000-00.analog-game.monitor' (default)
+21:39:41.765: [Loaded global audio device]: 'Desktop Audio'
+21:39:41.767: pulse-input: Server name: 'pulseaudio 17.0'
+21:39:41.767: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+21:39:41.767: pulse-input: Started recording from 'alsa_input.usb-SteelSeries_SteelSeries_Arctis_5_00000000-00.analog-chat' (default)
+21:39:41.767: [Loaded global audio device]: 'Mic/Aux'
+21:39:41.768: Switched to scene 'Scene'
+21:39:41.768: ------------------------------------------------
+21:39:41.768: Loaded scenes:
+21:39:41.768: - scene 'Scene':
+21:39:41.768: ------------------------------------------------
+21:39:42.317: adding 42 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Mic/Aux)
+21:39:42.317: 
+21:40:15.576: pulse-input: Server name: 'pulseaudio 17.0'
+21:40:15.577: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+21:40:15.577: pulse-input: Started recording from 'alsa_input.usb-SteelSeries_SteelSeries_Arctis_5_00000000-00.analog-chat' (default)
+21:40:15.587: User added source 'Audio Input Capture (PulseAudio)' (pulse_input_capture) to scene 'Scene'
+21:40:43.094: xshm-input: Geometry 1920x1080 @ 2560,180
+21:40:43.102: User added source 'Screen Capture (XSHM)' (xshm_input) to scene 'Scene'
+21:40:46.683: xshm-input: Geometry 2560x1440 @ 0,0
+21:42:16.544: Number of remaining views: 1
+21:42:16.544: ---------------------------------
+21:42:16.545: video settings reset:
+21:42:16.545: 	base resolution:   2560x1440
+21:42:16.545: 	output resolution: 2560x1440
+21:42:16.545: 	downscale filter:  Bicubic
+21:42:16.545: 	fps:               30/1
+21:42:16.545: 	format:            NV12
+21:42:16.545: 	YUV mode:          Rec. 709/Partial
+21:42:16.548: NV12 texture support not available
+21:42:16.548: P010 texture support not available
+21:42:32.258: v4l2-input: Start capture from 
+21:42:32.258: v4l2-input: Unable to open device
+21:42:32.258: v4l2-input: Initialization failed, errno: No such file or directory
+21:42:32.262: User added source 'Video Capture Device (V4L2)' (v4l2_input) to scene 'Scene'
+21:42:36.313: v4l2-input: /dev/video1 seems to not support video capture
+21:42:36.313: v4l2-input: Found device 'HD Webcam: HD Webcam' at /dev/video0
+21:42:36.315: v4l2-input: Found input 'Camera 1' (Index 0)
+21:42:36.333: v4l2-controls: setting default for Power Line Frequency to 1
+21:42:36.339: v4l2-input: Start capture from /dev/video0
+21:42:36.341: v4l2-input: Input: 0
+21:42:36.341: v4l2-input: Resolution: 1280x720
+21:42:36.341: v4l2-input: Pixelformat: YUYV
+21:42:36.341: v4l2-input: Linesize: 2560 Bytes
+21:42:36.341: v4l2-input: Framerate: 30.00 fps
+21:42:36.341: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:42:36.341: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:42:36.341: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:42:36.341: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:42:36.341: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:42:36.341: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:42:36.342: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:42:36.342: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+21:42:36.345: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:42:36.347: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:42:36.347: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:42:36.347: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:42:36.347: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:42:36.347: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:42:36.347: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:42:36.347: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+21:42:36.348: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:42:36.350: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:42:36.413: v4l2-input: /dev/video1 seems to not support video capture
+21:42:36.413: v4l2-input: Found device 'HD Webcam: HD Webcam' at /dev/video0
+21:42:36.413: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:42:36.414: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:42:36.414: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:42:36.414: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:42:36.414: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:42:36.414: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:42:36.414: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:42:36.414: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:42:36.415: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:42:36.415: v4l2-input: Found input 'Camera 1' (Index 0)
+21:42:36.415: v4l2-controls: setting default for Power Line Frequency to 1
+21:42:36.416: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:42:36.416: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:42:36.416: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:42:36.416: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:42:36.416: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:42:36.416: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:42:36.416: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:42:36.511: v4l2-input: /dev/video0: select timed out
+21:42:36.511: v4l2-input: /dev/video0: failed to log status
+21:42:36.678: v4l2-input: /dev/video0: select timed out
+21:42:36.678: v4l2-input: /dev/video0: failed to log status
+21:42:36.845: v4l2-input: /dev/video0: select timed out
+21:42:36.845: v4l2-input: /dev/video0: failed to log status
+21:42:37.012: v4l2-input: /dev/video0: select timed out
+21:42:37.013: v4l2-input: /dev/video0: failed to log status
+21:42:37.179: v4l2-input: /dev/video0: select timed out
+21:42:37.179: v4l2-input: /dev/video0: failed to log status
+21:42:37.346: v4l2-input: /dev/video0: select timed out
+21:42:37.346: v4l2-input: /dev/video0: failed to log status
+21:42:37.513: v4l2-input: /dev/video0: select timed out
+21:42:37.513: v4l2-input: /dev/video0: failed to log status
+21:42:37.680: v4l2-input: /dev/video0: select timed out
+21:42:37.680: v4l2-input: /dev/video0: failed to log status
+21:42:37.847: v4l2-input: /dev/video0: select timed out
+21:42:37.847: v4l2-input: /dev/video0: failed to log status
+21:42:38.014: v4l2-input: /dev/video0: select timed out
+21:42:38.014: v4l2-input: /dev/video0: failed to log status
+21:42:38.181: v4l2-input: /dev/video0: select timed out
+21:42:38.181: v4l2-input: /dev/video0: failed to log status
+21:42:38.348: v4l2-input: /dev/video0: select timed out
+21:42:38.348: v4l2-input: /dev/video0: failed to log status
+21:42:38.515: v4l2-input: /dev/video0: select timed out
+21:42:38.515: v4l2-input: /dev/video0: failed to log status
+21:42:38.682: v4l2-input: /dev/video0: select timed out
+21:42:38.682: v4l2-input: /dev/video0: failed to log status
+21:42:38.849: v4l2-input: /dev/video0: select timed out
+21:42:38.849: v4l2-input: /dev/video0: failed to log status
+21:42:39.016: v4l2-input: /dev/video0: select timed out
+21:42:39.016: v4l2-input: /dev/video0: failed to log status
+21:42:39.183: v4l2-input: /dev/video0: select timed out
+21:42:39.183: v4l2-input: /dev/video0: failed to log status
+21:42:39.350: v4l2-input: /dev/video0: select timed out
+21:42:39.350: v4l2-input: /dev/video0: failed to log status
+21:42:39.517: v4l2-input: /dev/video0: select timed out
+21:42:39.517: v4l2-input: /dev/video0: failed to log status
+21:42:39.684: v4l2-input: /dev/video0: select timed out
+21:42:39.684: v4l2-input: /dev/video0: failed to log status
+21:42:39.851: v4l2-input: /dev/video0: select timed out
+21:42:39.851: v4l2-input: /dev/video0: failed to log status
+21:42:40.018: v4l2-input: /dev/video0: select timed out
+21:42:40.018: v4l2-input: /dev/video0: failed to log status
+21:42:40.185: v4l2-input: /dev/video0: select timed out
+21:42:40.185: v4l2-input: /dev/video0: failed to log status
+21:42:40.352: v4l2-input: /dev/video0: select timed out
+21:42:40.352: v4l2-input: /dev/video0: failed to log status
+21:42:40.519: v4l2-input: /dev/video0: select timed out
+21:42:40.519: v4l2-input: /dev/video0: failed to log status
+21:42:40.686: v4l2-input: /dev/video0: select timed out
+21:42:40.686: v4l2-input: /dev/video0: failed to log status
+21:42:40.853: v4l2-input: /dev/video0: select timed out
+21:42:40.853: v4l2-input: /dev/video0: failed to log status
+21:42:41.020: v4l2-input: /dev/video0: select timed out
+21:42:41.020: v4l2-input: /dev/video0: failed to log status
+21:42:41.187: v4l2-input: /dev/video0: select timed out
+21:42:41.187: v4l2-input: /dev/video0: failed to log status
+21:42:41.354: v4l2-input: /dev/video0: select timed out
+21:42:41.354: v4l2-input: /dev/video0: failed to log status
+21:42:41.521: v4l2-input: /dev/video0: select timed out
+21:42:41.521: v4l2-input: /dev/video0: failed to log status
+21:42:41.688: v4l2-input: /dev/video0: select timed out
+21:42:41.688: v4l2-input: /dev/video0: failed to log status
+21:42:41.855: v4l2-input: /dev/video0: select timed out
+21:42:41.855: v4l2-input: /dev/video0: failed to log status
+21:42:42.022: v4l2-input: /dev/video0: select timed out
+21:42:42.022: v4l2-input: /dev/video0: failed to log status
+21:42:42.189: v4l2-input: /dev/video0: select timed out
+21:42:42.189: v4l2-input: /dev/video0: failed to log status
+21:42:42.356: v4l2-input: /dev/video0: select timed out
+21:42:42.356: v4l2-input: /dev/video0: failed to log status
+21:42:42.523: v4l2-input: /dev/video0: select timed out
+21:42:42.523: v4l2-input: /dev/video0: failed to log status
+21:42:42.690: v4l2-input: /dev/video0: select timed out
+21:42:42.690: v4l2-input: /dev/video0: failed to log status
+21:42:42.857: v4l2-input: /dev/video0: select timed out
+21:42:42.857: v4l2-input: /dev/video0: failed to log status
+21:42:43.024: v4l2-input: /dev/video0: select timed out
+21:42:43.024: v4l2-input: /dev/video0: failed to log status
+21:42:43.191: v4l2-input: /dev/video0: select timed out
+21:42:43.191: v4l2-input: /dev/video0: failed to log status
+21:42:43.358: v4l2-input: /dev/video0: select timed out
+21:42:43.358: v4l2-input: /dev/video0: failed to log status
+21:42:43.525: v4l2-input: /dev/video0: select timed out
+21:42:43.525: v4l2-input: /dev/video0: failed to log status
+21:42:43.692: v4l2-input: /dev/video0: select timed out
+21:42:43.692: v4l2-input: /dev/video0: failed to log status
+21:42:43.859: v4l2-input: /dev/video0: select timed out
+21:42:43.859: v4l2-input: /dev/video0: failed to log status
+21:42:44.026: v4l2-input: /dev/video0: select timed out
+21:42:44.026: v4l2-input: /dev/video0: failed to log status
+21:42:44.193: v4l2-input: /dev/video0: select timed out
+21:42:44.193: v4l2-input: /dev/video0: failed to log status
+21:42:44.360: v4l2-input: /dev/video0: select timed out
+21:42:44.360: v4l2-input: /dev/video0: failed to log status
+21:42:44.527: v4l2-input: /dev/video0: select timed out
+21:42:44.527: v4l2-input: /dev/video0: failed to log status
+21:42:44.694: v4l2-input: /dev/video0: select timed out
+21:42:44.694: v4l2-input: /dev/video0: failed to log status
+21:42:44.861: v4l2-input: /dev/video0: select timed out
+21:42:44.861: v4l2-input: /dev/video0: failed to log status
+21:42:45.028: v4l2-input: /dev/video0: select timed out
+21:42:45.028: v4l2-input: /dev/video0: failed to log status
+21:42:45.195: v4l2-input: /dev/video0: select timed out
+21:42:45.195: v4l2-input: /dev/video0: failed to log status
+21:42:45.362: v4l2-input: /dev/video0: select timed out
+21:42:45.362: v4l2-input: /dev/video0: failed to log status
+21:42:45.529: v4l2-input: /dev/video0: select timed out
+21:42:45.529: v4l2-input: /dev/video0: failed to log status
+21:42:45.696: v4l2-input: /dev/video0: select timed out
+21:42:45.696: v4l2-input: /dev/video0: failed to log status
+21:42:45.863: v4l2-input: /dev/video0: select timed out
+21:42:45.863: v4l2-input: /dev/video0: failed to log status
+21:42:46.030: v4l2-input: /dev/video0: select timed out
+21:42:46.030: v4l2-input: /dev/video0: failed to log status
+21:42:46.197: v4l2-input: /dev/video0: select timed out
+21:42:46.197: v4l2-input: /dev/video0: failed to log status
+21:42:46.364: v4l2-input: /dev/video0: select timed out
+21:42:46.364: v4l2-input: /dev/video0: failed to log status
+21:42:46.531: v4l2-input: /dev/video0: select timed out
+21:42:46.531: v4l2-input: /dev/video0: failed to log status
+21:42:46.698: v4l2-input: /dev/video0: select timed out
+21:42:46.698: v4l2-input: /dev/video0: failed to log status
+21:42:46.865: v4l2-input: /dev/video0: select timed out
+21:42:46.865: v4l2-input: /dev/video0: failed to log status
+21:42:47.032: v4l2-input: /dev/video0: select timed out
+21:42:47.032: v4l2-input: /dev/video0: failed to log status
+21:42:47.199: v4l2-input: /dev/video0: select timed out
+21:42:47.199: v4l2-input: /dev/video0: failed to log status
+21:42:47.366: v4l2-input: /dev/video0: select timed out
+21:42:47.366: v4l2-input: /dev/video0: failed to log status
+21:42:47.533: v4l2-input: /dev/video0: select timed out
+21:42:47.533: v4l2-input: /dev/video0: failed to log status
+21:42:47.700: v4l2-input: /dev/video0: select timed out
+21:42:47.700: v4l2-input: /dev/video0: failed to log status
+21:42:47.867: v4l2-input: /dev/video0: select timed out
+21:42:47.867: v4l2-input: /dev/video0: failed to log status
+21:42:48.034: v4l2-input: /dev/video0: select timed out
+21:42:48.034: v4l2-input: /dev/video0: failed to log status
+21:42:48.201: v4l2-input: /dev/video0: select timed out
+21:42:48.201: v4l2-input: /dev/video0: failed to log status
+21:42:48.368: v4l2-input: /dev/video0: select timed out
+21:42:48.369: v4l2-input: /dev/video0: failed to log status
+21:42:48.536: v4l2-input: /dev/video0: select timed out
+21:42:48.536: v4l2-input: /dev/video0: failed to log status
+21:42:48.702: v4l2-input: /dev/video0: select timed out
+21:42:48.703: v4l2-input: /dev/video0: failed to log status
+21:42:48.869: v4l2-input: /dev/video0: select timed out
+21:42:48.870: v4l2-input: /dev/video0: failed to log status
+21:42:49.036: v4l2-input: /dev/video0: select timed out
+21:42:49.036: v4l2-input: /dev/video0: failed to log status
+21:42:49.203: v4l2-input: /dev/video0: select timed out
+21:42:49.203: v4l2-input: /dev/video0: failed to log status
+21:42:49.370: v4l2-input: /dev/video0: select timed out
+21:42:49.370: v4l2-input: /dev/video0: failed to log status
+21:42:49.537: v4l2-input: /dev/video0: select timed out
+21:42:49.537: v4l2-input: /dev/video0: failed to log status
+21:42:49.704: v4l2-input: /dev/video0: select timed out
+21:42:49.704: v4l2-input: /dev/video0: failed to log status
+21:42:49.871: v4l2-input: /dev/video0: select timed out
+21:42:49.871: v4l2-input: /dev/video0: failed to log status
+21:42:50.038: v4l2-input: /dev/video0: select timed out
+21:42:50.038: v4l2-input: /dev/video0: failed to log status
+21:42:50.205: v4l2-input: /dev/video0: select timed out
+21:42:50.205: v4l2-input: /dev/video0: failed to log status
+21:42:50.372: v4l2-input: /dev/video0: select timed out
+21:42:50.372: v4l2-input: /dev/video0: failed to log status
+21:42:50.539: v4l2-input: /dev/video0: select timed out
+21:42:50.539: v4l2-input: /dev/video0: failed to log status
+21:42:50.706: v4l2-input: /dev/video0: select timed out
+21:42:50.706: v4l2-input: /dev/video0: failed to log status
+21:42:50.873: v4l2-input: /dev/video0: select timed out
+21:42:50.873: v4l2-input: /dev/video0: failed to log status
+21:42:51.040: v4l2-input: /dev/video0: select timed out
+21:42:51.040: v4l2-input: /dev/video0: failed to log status
+21:42:51.207: v4l2-input: /dev/video0: select timed out
+21:42:51.207: v4l2-input: /dev/video0: failed to log status
+21:42:51.374: v4l2-input: /dev/video0: select timed out
+21:42:51.375: v4l2-input: /dev/video0: failed to log status
+21:42:51.542: v4l2-input: /dev/video0: select timed out
+21:42:51.542: v4l2-input: /dev/video0: failed to log status
+21:42:51.709: v4l2-input: /dev/video0: select timed out
+21:42:51.709: v4l2-input: /dev/video0: failed to log status
+21:42:51.876: v4l2-input: /dev/video0: select timed out
+21:42:51.876: v4l2-input: /dev/video0: failed to log status
+21:42:52.043: v4l2-input: /dev/video0: select timed out
+21:42:52.043: v4l2-input: /dev/video0: failed to log status
+21:42:52.210: v4l2-input: /dev/video0: select timed out
+21:42:52.210: v4l2-input: /dev/video0: failed to log status
+21:42:52.377: v4l2-input: /dev/video0: select timed out
+21:42:52.377: v4l2-input: /dev/video0: failed to log status
+21:42:52.544: v4l2-input: /dev/video0: select timed out
+21:42:52.544: v4l2-input: /dev/video0: failed to log status
+21:42:52.711: v4l2-input: /dev/video0: select timed out
+21:42:52.711: v4l2-input: /dev/video0: failed to log status
+21:42:52.878: v4l2-input: /dev/video0: select timed out
+21:42:52.878: v4l2-input: /dev/video0: failed to log status
+21:42:53.045: v4l2-input: /dev/video0: select timed out
+21:42:53.045: v4l2-input: /dev/video0: failed to log status
+21:42:53.212: v4l2-input: /dev/video0: select timed out
+21:42:53.212: v4l2-input: /dev/video0: failed to log status
+21:42:53.379: v4l2-input: /dev/video0: select timed out
+21:42:53.379: v4l2-input: /dev/video0: failed to log status
+21:42:53.546: v4l2-input: /dev/video0: select timed out
+21:42:53.546: v4l2-input: /dev/video0: failed to log status
+21:42:53.713: v4l2-input: /dev/video0: select timed out
+21:42:53.713: v4l2-input: /dev/video0: failed to log status
+21:42:53.880: v4l2-input: /dev/video0: select timed out
+21:42:53.880: v4l2-input: /dev/video0: failed to log status
+21:42:54.047: v4l2-input: /dev/video0: select timed out
+21:42:54.047: v4l2-input: /dev/video0: failed to log status
+21:42:54.214: v4l2-input: /dev/video0: select timed out
+21:42:54.214: v4l2-input: /dev/video0: failed to log status
+21:42:54.381: v4l2-input: /dev/video0: select timed out
+21:42:54.381: v4l2-input: /dev/video0: failed to log status
+21:42:54.548: v4l2-input: /dev/video0: select timed out
+21:42:54.548: v4l2-input: /dev/video0: failed to log status
+21:42:54.715: v4l2-input: /dev/video0: select timed out
+21:42:54.715: v4l2-input: /dev/video0: failed to log status
+21:42:54.882: v4l2-input: /dev/video0: select timed out
+21:42:54.882: v4l2-input: /dev/video0: failed to log status
+21:42:55.049: v4l2-input: /dev/video0: select timed out
+21:42:55.049: v4l2-input: /dev/video0: failed to log status
+21:42:55.216: v4l2-input: /dev/video0: select timed out
+21:42:55.216: v4l2-input: /dev/video0: failed to log status
+21:42:55.383: v4l2-input: /dev/video0: select timed out
+21:42:55.383: v4l2-input: /dev/video0: failed to log status
+21:42:55.550: v4l2-input: /dev/video0: select timed out
+21:42:55.550: v4l2-input: /dev/video0: failed to log status
+21:42:55.717: v4l2-input: /dev/video0: select timed out
+21:42:55.717: v4l2-input: /dev/video0: failed to log status
+21:42:55.884: v4l2-input: /dev/video0: select timed out
+21:42:55.884: v4l2-input: /dev/video0: failed to log status
+21:42:56.051: v4l2-input: /dev/video0: select timed out
+21:42:56.051: v4l2-input: /dev/video0: failed to log status
+21:42:56.179: User Removed source 'Video Capture Device (V4L2)' (v4l2_input) from scene 'Scene'
+21:42:56.218: v4l2-input: /dev/video0: select timed out
+21:42:56.218: v4l2-input: /dev/video0: failed to log status
+21:42:56.218: v4l2-input: /dev/video0: Stopped capture after 0 frames
+21:43:02.424: v4l2-input: Start capture from 
+21:43:02.424: v4l2-input: Unable to open device
+21:43:02.424: v4l2-input: Initialization failed, errno: No such file or directory
+21:43:02.432: User added source 'Video Capture Device (V4L2)' (v4l2_input) to scene 'Scene'
+21:43:02.573: v4l2-input: /dev/video1 seems to not support video capture
+21:43:02.574: v4l2-input: Found device 'HD Webcam: HD Webcam' at /dev/video0
+21:43:02.579: v4l2-input: Found input 'Camera 1' (Index 0)
+21:43:02.579: v4l2-controls: setting default for Power Line Frequency to 1
+21:43:02.580: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:43:02.580: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:43:02.580: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:43:02.580: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:43:02.580: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:43:02.580: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:43:02.582: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+21:43:02.583: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:43:02.590: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:43:02.590: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:43:02.590: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:43:02.590: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:43:02.590: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:43:02.590: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:43:02.592: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+21:43:02.593: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:43:02.597: v4l2-input: Start capture from /dev/video0
+21:43:02.598: v4l2-input: Input: 0
+21:43:02.624: v4l2-input: Resolution: 1280x720
+21:43:02.624: v4l2-input: Pixelformat: YUYV
+21:43:02.624: v4l2-input: Linesize: 2560 Bytes
+21:43:02.624: v4l2-input: Framerate: 10.00 fps
+21:43:02.624: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:43:02.626: v4l2-input: /dev/video0: select timeout set to 500000 (5x frame periods)
+21:43:03.129: v4l2-input: /dev/video0: select timed out
+21:43:03.129: v4l2-input: /dev/video0: failed to log status
+21:43:18.069: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:43:18.163: v4l2-input: /dev/video0: Stopped capture after 149 frames
+21:43:18.164: v4l2-input: Start capture from /dev/video0
+21:43:18.165: v4l2-input: Input: 0
+21:43:18.189: v4l2-input: Resolution: 1280x720
+21:43:18.189: v4l2-input: Pixelformat: MJPG
+21:43:18.189: v4l2-input: Linesize: 0 Bytes
+21:43:18.189: v4l2-input: Framerate: 30.00 fps
+21:43:18.193: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:43:18.363: v4l2-input: /dev/video0: select timed out
+21:43:18.363: v4l2-input: /dev/video0: failed to log status
+21:43:19.956: v4l2-input: decoder: failed to send frame to codec
+21:43:19.956: v4l2-input: failed to unpack jpeg or h264
+21:43:19.956: v4l2-input: /dev/video0: Stopped capture after 44 frames
+21:43:20.838: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:43:20.868: v4l2-input: Start capture from /dev/video0
+21:43:20.869: v4l2-input: Input: 0
+21:43:20.881: v4l2-input: Resolution: 1280x720
+21:43:20.881: v4l2-input: Pixelformat: BGR3
+21:43:20.881: v4l2-input: Linesize: 3840 Bytes
+21:43:20.881: v4l2-input: Framerate: 30.00 fps
+21:43:20.883: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:43:21.054: v4l2-input: /dev/video0: select timed out
+21:43:21.054: v4l2-input: /dev/video0: failed to log status
+21:43:21.221: v4l2-input: /dev/video0: select timed out
+21:43:21.221: v4l2-input: /dev/video0: failed to log status
+21:43:24.262: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:43:24.323: v4l2-input: /dev/video0: Stopped capture after 94 frames
+21:43:24.325: v4l2-input: Start capture from /dev/video0
+21:43:24.326: v4l2-input: Input: 0
+21:43:24.338: v4l2-input: Resolution: 1280x720
+21:43:24.338: v4l2-input: Pixelformat: YU12
+21:43:24.338: v4l2-input: Linesize: 1280 Bytes
+21:43:24.338: v4l2-input: Framerate: 30.00 fps
+21:43:24.340: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:43:24.510: v4l2-input: /dev/video0: select timed out
+21:43:24.510: v4l2-input: /dev/video0: failed to log status
+21:43:24.677: v4l2-input: /dev/video0: select timed out
+21:43:24.677: v4l2-input: /dev/video0: failed to log status
+21:43:25.925: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:43:25.972: v4l2-input: /dev/video0: Stopped capture after 39 frames
+21:43:25.973: v4l2-input: Start capture from /dev/video0
+21:43:25.974: v4l2-input: Input: 0
+21:43:25.987: v4l2-input: Resolution: 1280x720
+21:43:25.987: v4l2-input: Pixelformat: YV12
+21:43:25.987: v4l2-input: Linesize: 1280 Bytes
+21:43:25.987: v4l2-input: Framerate: 30.00 fps
+21:43:25.988: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:43:26.159: v4l2-input: /dev/video0: select timed out
+21:43:26.159: v4l2-input: /dev/video0: failed to log status
+21:43:26.326: v4l2-input: /dev/video0: select timed out
+21:43:26.326: v4l2-input: /dev/video0: failed to log status
+21:43:27.714: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:43:27.755: v4l2-input: /dev/video0: Stopped capture after 43 frames
+21:43:27.757: v4l2-input: Start capture from /dev/video0
+21:43:27.757: v4l2-input: Input: 0
+21:43:27.783: v4l2-input: Resolution: 1280x720
+21:43:27.783: v4l2-input: Pixelformat: YUYV
+21:43:27.783: v4l2-input: Linesize: 2560 Bytes
+21:43:27.783: v4l2-input: Framerate: 10.00 fps
+21:43:27.784: v4l2-input: /dev/video0: select timeout set to 500000 (5x frame periods)
+21:43:28.287: v4l2-input: /dev/video0: select timed out
+21:43:28.287: v4l2-input: /dev/video0: failed to log status
+21:43:31.534: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:43:31.627: v4l2-input: /dev/video0: Stopped capture after 31 frames
+21:43:31.628: v4l2-input: Start capture from /dev/video0
+21:43:31.629: v4l2-input: Input: 0
+21:43:31.654: v4l2-input: Resolution: 1280x720
+21:43:31.654: v4l2-input: Pixelformat: MJPG
+21:43:31.654: v4l2-input: Linesize: 0 Bytes
+21:43:31.654: v4l2-input: Framerate: 30.00 fps
+21:43:31.656: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:43:31.826: v4l2-input: /dev/video0: select timed out
+21:43:31.826: v4l2-input: /dev/video0: failed to log status
+21:43:31.993: v4l2-input: /dev/video0: select timed out
+21:43:31.993: v4l2-input: /dev/video0: failed to log status
+21:43:36.930: v4l2-input: /dev/video0: Stopped capture after 150 frames
+21:43:36.931: v4l2-input: Start capture from /dev/video0
+21:43:36.932: v4l2-input: Input: 0
+21:43:36.957: v4l2-input: Resolution: 320x240
+21:43:36.957: v4l2-input: Pixelformat: MJPG
+21:43:36.957: v4l2-input: Linesize: 0 Bytes
+21:43:36.957: v4l2-input: Framerate: 30.00 fps
+21:43:36.957: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:43:37.127: v4l2-input: /dev/video0: select timed out
+21:43:37.127: v4l2-input: /dev/video0: failed to log status
+21:43:37.294: v4l2-input: /dev/video0: select timed out
+21:43:37.294: v4l2-input: /dev/video0: failed to log status
+21:43:40.850: v4l2-input: /dev/video0: Stopped capture after 108 frames
+21:43:40.852: v4l2-input: Start capture from /dev/video0
+21:43:40.853: v4l2-input: Input: 0
+21:43:40.878: v4l2-input: Resolution: 640x360
+21:43:40.878: v4l2-input: Pixelformat: MJPG
+21:43:40.878: v4l2-input: Linesize: 0 Bytes
+21:43:40.878: v4l2-input: Framerate: 30.00 fps
+21:43:40.878: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:43:41.048: v4l2-input: /dev/video0: select timed out
+21:43:41.048: v4l2-input: /dev/video0: failed to log status
+21:43:41.215: v4l2-input: /dev/video0: select timed out
+21:43:41.215: v4l2-input: /dev/video0: failed to log status
+21:43:45.002: v4l2-input: /dev/video0: Stopped capture after 115 frames
+21:43:45.004: v4l2-input: Start capture from /dev/video0
+21:43:45.005: v4l2-input: Input: 0
+21:43:45.029: v4l2-input: Resolution: 640x360
+21:43:45.029: v4l2-input: Pixelformat: MJPG
+21:43:45.029: v4l2-input: Linesize: 0 Bytes
+21:43:45.042: v4l2-input: Framerate: 30.00 fps
+21:43:45.042: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:43:45.212: v4l2-input: /dev/video0: select timed out
+21:43:45.213: v4l2-input: /dev/video0: failed to log status
+21:43:45.379: v4l2-input: /dev/video0: select timed out
+21:43:45.380: v4l2-input: /dev/video0: failed to log status
+21:43:47.132: v4l2-input: /dev/video0: Stopped capture after 53 frames
+21:43:47.133: v4l2-input: Start capture from /dev/video0
+21:43:47.133: v4l2-input: Input: 0
+21:43:47.158: v4l2-input: Resolution: 640x360
+21:43:47.158: v4l2-input: Pixelformat: MJPG
+21:43:47.158: v4l2-input: Linesize: 0 Bytes
+21:43:47.158: v4l2-input: Framerate: 30.00 fps
+21:43:47.159: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:43:47.329: v4l2-input: /dev/video0: select timed out
+21:43:47.329: v4l2-input: /dev/video0: failed to log status
+21:43:48.051: v4l2-input: decoder: failed to send frame to codec
+21:43:48.051: v4l2-input: failed to unpack jpeg or h264
+21:43:48.051: v4l2-input: /dev/video0: Stopped capture after 18 frames
+21:44:14.086: User Removed source 'Video Capture Device (V4L2)' (v4l2_input) from scene 'Scene'
+21:44:19.389: v4l2-input: Start capture from 
+21:44:19.389: v4l2-input: Unable to open device
+21:44:19.389: v4l2-input: Initialization failed, errno: No such file or directory
+21:44:19.396: User added source 'Video Capture Device (V4L2)' (v4l2_input) to scene 'Scene'
+21:44:19.540: v4l2-input: /dev/video1 seems to not support video capture
+21:44:19.541: v4l2-input: Found device 'HD Webcam: HD Webcam' at /dev/video0
+21:44:19.546: v4l2-input: Found input 'Camera 1' (Index 0)
+21:44:19.546: v4l2-controls: setting default for Power Line Frequency to 1
+21:44:19.548: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:44:19.548: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:44:19.548: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:44:19.548: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:44:19.548: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:44:19.548: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:44:19.549: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+21:44:19.550: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:44:19.557: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:44:19.557: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:44:19.557: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:44:19.557: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:44:19.557: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:44:19.558: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:44:19.559: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+21:44:19.561: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:44:19.565: v4l2-input: Start capture from /dev/video0
+21:44:19.566: v4l2-input: Input: 0
+21:44:19.566: v4l2-input: Resolution: 640x360
+21:44:19.566: v4l2-input: Pixelformat: MJPG
+21:44:19.566: v4l2-input: Linesize: 0 Bytes
+21:44:19.566: v4l2-input: Framerate: 30.00 fps
+21:44:19.567: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:44:19.571: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:44:19.737: v4l2-input: /dev/video0: select timed out
+21:44:19.737: v4l2-input: /dev/video0: failed to log status
+21:44:19.737: v4l2-input: /dev/video0: Stopped capture after 0 frames
+21:44:19.738: v4l2-input: Start capture from /dev/video0
+21:44:19.739: v4l2-input: Input: 0
+21:44:19.763: v4l2-input: Resolution: 640x360
+21:44:19.763: v4l2-input: Pixelformat: YUYV
+21:44:19.763: v4l2-input: Linesize: 1280 Bytes
+21:44:19.763: v4l2-input: Framerate: 30.00 fps
+21:44:19.764: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+21:44:19.934: v4l2-input: /dev/video0: select timed out
+21:44:19.934: v4l2-input: /dev/video0: failed to log status
+21:44:20.101: v4l2-input: /dev/video0: select timed out
+21:44:20.101: v4l2-input: /dev/video0: failed to log status
+21:44:20.268: v4l2-input: /dev/video0: select timed out
+21:44:20.268: v4l2-input: /dev/video0: failed to log status
+21:45:12.274: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:12.359: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:12.899: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:12.962: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:13.000: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:13.057: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:13.357: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:13.399: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:13.695: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:13.777: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:14.058: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:14.102: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:14.392: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:14.456: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:14.836: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:14.877: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:14.967: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:15.297: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:15.342: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:16.167: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:16.238: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:19.729: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:19.807: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:19.852: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:20.131: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:20.169: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:20.211: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:20.597: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:20.641: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:20.704: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:21.335: xshm-input: Geometry 2560x1440 @ 0,0
+21:45:28.822: Last log entry repeated for 5 more lines
+21:45:28.822: v4l2-input: /dev/video1 seems to not support video capture
+21:45:28.823: v4l2-input: Found device 'HD Webcam: HD Webcam' at /dev/video0
+21:45:28.824: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:45:28.826: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:45:28.827: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:45:28.827: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:45:28.827: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:45:28.827: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:45:28.827: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:45:28.827: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:45:28.828: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:45:28.829: v4l2-input: Found input 'Camera 1' (Index 0)
+21:45:28.829: v4l2-controls: setting default for Power Line Frequency to 1
+21:45:28.830: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:45:28.830: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:45:28.830: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:45:28.830: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:45:28.830: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:45:28.830: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:45:28.832: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:46:23.637: pulse-am: Server name: 'pulseaudio 17.0'
+21:46:23.637: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+21:46:23.638: pulse-am: Started Monitoring in 'alsa_output.usb-SteelSeries_SteelSeries_Arctis_5_00000000-00.analog-game'
+21:46:23.638: User changed audio monitoring for source 'Audio Input Capture (PulseAudio)' to: monitor and output
+21:46:35.913: pulse-am: Stopped Monitoring in 'alsa_output.usb-SteelSeries_SteelSeries_Arctis_5_00000000-00.analog-game'
+21:46:35.913: pulse-am: Got 1230 packets with 541223 frames
+21:46:35.913: User changed audio monitoring for source 'Audio Input Capture (PulseAudio)' to: none
+21:47:20.793: v4l2-input: /dev/video1 seems to not support video capture
+21:47:20.794: v4l2-input: Found device 'HD Webcam: HD Webcam' at /dev/video0
+21:47:20.795: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:47:20.796: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:47:20.797: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:47:20.797: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:47:20.797: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:47:20.797: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:47:20.797: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:47:20.797: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:47:20.799: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:47:20.800: v4l2-input: Found input 'Camera 1' (Index 0)
+21:47:20.800: v4l2-controls: setting default for Power Line Frequency to 1
+21:47:20.801: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:47:20.801: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:47:20.801: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:47:20.801: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:47:20.801: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:47:20.801: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:47:20.802: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:47:28.436: xshm-input: Geometry 1920x1080 @ 2560,180
+21:47:49.883:   OpenType support missing for "Open Sans", script 11
+21:47:49.884:   OpenType support missing for "Open Sans", script 12
+21:47:49.884:   OpenType support missing for "Open Sans", script 16
+21:47:49.885:   OpenType support missing for "Open Sans", script 20
+22:01:46.584: ---------------------------------
+22:01:46.584: [FFmpeg NVENC encoder: 'simple_video_stream'] settings:
+22:01:46.584: 	encoder:      NVIDIA NVENC H.264 (FFmpeg)
+22:01:46.584: 	rate_control: CBR
+22:01:46.584: 	bitrate:      2500
+22:01:46.584: 	cqp:          0
+22:01:46.584: 	keyint:       -1
+22:01:46.584: 	preset:       p5
+22:01:46.584: 	tuning:       hq
+22:01:46.584: 	multipass:    qres
+22:01:46.584: 	profile:      high
+22:01:46.584: 	width:        2560
+22:01:46.584: 	height:       1440
+22:01:46.584: 	b-frames:     2
+22:01:46.584: 	psycho-aq:    1
+22:01:46.584: 	GPU:          0
+22:01:46.584: 
+22:01:46.806: ---------------------------------
+22:01:46.806: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: stereo
+22:01:46.806: 
+22:01:46.808: ==== Recording Start ===============================================
+22:01:46.808: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/Ben/2024-02-28 22-01-46.mkv'...
+22:06:33.851: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/Ben/2024-02-28 22-01-46.mkv' stopped
+22:06:33.851: Output 'simple_file_output': stopping
+22:06:33.851: Output 'simple_file_output': Total frames output: 8598
+22:06:33.851: Output 'simple_file_output': Total drawn frames: 8561 (8612 attempted)
+22:06:33.851: Output 'simple_file_output': Number of lagged frames due to rendering lag/stalls: 51 (0.6%)
+22:06:33.851: ==== Recording Stop ================================================
+22:07:49.271: ==== Shutting down ==================================================
+22:07:49.285: pulse-input: Stopped recording from 'alsa_output.usb-SteelSeries_SteelSeries_Arctis_5_00000000-00.analog-game.monitor'
+22:07:49.285: pulse-input: Got 222436 packets with 74417688 frames
+22:07:49.286: pulse-input: Stopped recording from 'alsa_input.usb-SteelSeries_SteelSeries_Arctis_5_00000000-00.analog-chat'
+22:07:49.286: pulse-input: Got 169042 packets with 81001632 frames
+22:07:49.286: pulse-input: Stopped recording from 'alsa_input.usb-SteelSeries_SteelSeries_Arctis_5_00000000-00.analog-chat'
+22:07:49.287: pulse-input: Got 165654 packets with 79378944 frames
+22:07:49.326: v4l2-input: /dev/video0: Stopped capture after 42935 frames
+22:07:49.331: All scene data cleared
+22:07:49.331: ------------------------------------------------
+22:07:49.482: [Scripting] Total detached callbacks: 0
+22:07:49.482: Freeing OBS context data
+22:07:49.521: == Profiler Results =============================
+22:07:49.521: run_program_init: 695.162 ms
+22:07:49.521:  ┣OBSApp::AppInit: 3.623 ms
+22:07:49.521:  ┃ ┗OBSApp::InitLocale: 0.628 ms
+22:07:49.521:  ┗OBSApp::OBSInit: 663.556 ms
+22:07:49.521:    ┣obs_startup: 0.929 ms
+22:07:49.521:    ┗OBSBasic::OBSInit: 631.644 ms
+22:07:49.521:      ┣OBSBasic::InitBasicConfig: 0.08 ms
+22:07:49.521:      ┣OBSBasic::ResetAudio: 0.227 ms
+22:07:49.521:      ┣OBSBasic::ResetVideo: 124.068 ms
+22:07:49.521:      ┃ ┗obs_init_graphics: 118.892 ms
+22:07:49.521:      ┃   ┗shader compilation: 25.687 ms
+22:07:49.521:      ┣OBSBasic::InitOBSCallbacks: 0.003 ms
+22:07:49.521:      ┣OBSBasic::InitHotkeys: 1.784 ms
+22:07:49.521:      ┣obs_load_all_modules2: 408.49 ms
+22:07:49.521:      ┃ ┣obs_init_module(decklink-captions.so): 0.001 ms
+22:07:49.521:      ┃ ┣obs_init_module(decklink-output-ui.so): 0 ms
+22:07:49.521:      ┃ ┣obs_init_module(decklink.so): 0.183 ms
+22:07:49.521:      ┃ ┣obs_init_module(frontend-tools.so): 54.119 ms
+22:07:49.521:      ┃ ┣obs_init_module(image-source.so): 0.005 ms
+22:07:49.521:      ┃ ┣obs_init_module(linux-alsa.so): 0.001 ms
+22:07:49.521:      ┃ ┣obs_init_module(linux-capture.so): 0.339 ms
+22:07:49.521:      ┃ ┣obs_init_module(linux-jack.so): 0.001 ms
+22:07:49.521:      ┃ ┣obs_init_module(linux-pipewire.so): 12.324 ms
+22:07:49.521:      ┃ ┣obs_init_module(linux-pulseaudio.so): 0.003 ms
+22:07:49.521:      ┃ ┣obs_init_module(linux-v4l2.so): 3.222 ms
+22:07:49.521:      ┃ ┣obs_init_module(obs-ffmpeg.so): 157.236 ms
+22:07:49.521:      ┃ ┃ ┗nvenc_check: 0.519 ms
+22:07:49.521:      ┃ ┣obs_init_module(obs-filters.so): 0.027 ms
+22:07:49.521:      ┃ ┣obs_init_module(obs-outputs.so): 0.003 ms
+22:07:49.521:      ┃ ┣obs_init_module(obs-qsv11.so): 0.087 ms
+22:07:49.521:      ┃ ┣obs_init_module(obs-transitions.so): 0.026 ms
+22:07:49.522:      ┃ ┣obs_init_module(obs-vst.so): 0.003 ms
+22:07:49.522:      ┃ ┣obs_init_module(obs-webrtc.so): 0.003 ms
+22:07:49.522:      ┃ ┣obs_init_module(obs-x264.so): 0.001 ms
+22:07:49.522:      ┃ ┣obs_init_module(rtmp-services.so): 0.447 ms
+22:07:49.522:      ┃ ┗obs_init_module(text-freetype2.so): 0.007 ms
+22:07:49.522:      ┣OBSBasic::InitService: 0.742 ms
+22:07:49.522:      ┣OBSBasic::ResetOutputs: 0.128 ms
+22:07:49.522:      ┣OBSBasic::CreateHotkeys: 0.016 ms
+22:07:49.522:      ┣OBSBasic::InitPrimitives: 0.055 ms
+22:07:49.522:      ┗OBSBasic::Load: 44.346 ms
+22:07:49.522: obs_hotkey_thread(25 ms): min=0.034 ms, median=5.232 ms, max=94.058 ms, 99th percentile=33.205 ms, 98.1212% below 25 ms
+22:07:49.522: audio_thread(Audio): min=0.006 ms, median=0.174 ms, max=148.727 ms, 99th percentile=6.724 ms
+22:07:49.522:  ┗receive_audio: min=0.002 ms, median=1.547 ms, max=27.543 ms, 99th percentile=15.357 ms, 0.170146 calls per parent call
+22:07:49.522:    ┣buffer_audio: min=0 ms, median=0.002 ms, max=0.123 ms, 99th percentile=0.007 ms
+22:07:49.522:    ┗do_encode: min=0.026 ms, median=1.541 ms, max=27.537 ms, 99th percentile=15.349 ms
+22:07:49.522:      ┣encode(simple_aac): min=0.022 ms, median=1.523 ms, max=27.526 ms, 99th percentile=15.336 ms
+22:07:49.522:      ┗send_packet: min=0.001 ms, median=0.01 ms, max=0.723 ms, 99th percentile=0.064 ms
+22:07:49.522: obs_graphics_thread(33.3333 ms): min=0.017 ms, median=12.1 ms, max=102.639 ms, 99th percentile=48.906 ms, 89.7725% below 33.333 ms
+22:07:49.522:  ┣tick_sources: min=0 ms, median=7.67 ms, max=99.635 ms, 99th percentile=40.594 ms
+22:07:49.522:  ┣output_frame: min=0.008 ms, median=0.23 ms, max=3.896 ms, 99th percentile=0.491 ms
+22:07:49.522:  ┃ ┗gs_context(video->graphics): min=0.008 ms, median=0.229 ms, max=3.895 ms, 99th percentile=0.489 ms
+22:07:49.522:  ┃   ┣render_video: min=0.005 ms, median=0.111 ms, max=2.517 ms, 99th percentile=0.294 ms
+22:07:49.522:  ┃   ┃ ┗render_main_texture: min=0.004 ms, median=0.106 ms, max=2.514 ms, 99th percentile=0.286 ms
+22:07:49.522:  ┃   ┗gs_flush: min=0.001 ms, median=0.118 ms, max=1.416 ms, 99th percentile=0.205 ms
+22:07:49.522:  ┗render_displays: min=0.001 ms, median=2.037 ms, max=80.346 ms, 99th percentile=21.265 ms
+22:07:49.522: OBSBasic::ResetVideo: 42.414 ms
+22:07:49.522: obs_graphics_thread(33.3333 ms): min=0.046 ms, median=19.704 ms, max=203.895 ms, 99th percentile=50.227 ms, 91.6625% below 33.333 ms
+22:07:49.522:  ┣tick_sources: min=0.002 ms, median=17.17 ms, max=195.609 ms, 99th percentile=41.212 ms
+22:07:49.522:  ┣output_frame: min=0.022 ms, median=0.56 ms, max=168.225 ms, 99th percentile=2.521 ms
+22:07:49.522:  ┃ ┣gs_context(video->graphics): min=0.021 ms, median=0.524 ms, max=168.225 ms, 99th percentile=1.188 ms
+22:07:49.522:  ┃ ┃ ┣render_video: min=0.015 ms, median=0.398 ms, max=168.086 ms, 99th percentile=0.921 ms
+22:07:49.522:  ┃ ┃ ┃ ┣render_main_texture: min=0.012 ms, median=0.382 ms, max=168.082 ms, 99th percentile=0.873 ms
+22:07:49.522:  ┃ ┃ ┃ ┣render_convert_texture: min=0.015 ms, median=0.049 ms, max=7.295 ms, 99th percentile=0.092 ms, 0.188084 calls per parent call
+22:07:49.522:  ┃ ┃ ┃ ┗stage_output_texture: min=0.007 ms, median=0.025 ms, max=1.035 ms, 99th percentile=0.051 ms, 0.188084 calls per parent call
+22:07:49.522:  ┃ ┃ ┣gs_flush: min=0.004 ms, median=0.097 ms, max=3.114 ms, 99th percentile=0.211 ms
+22:07:49.522:  ┃ ┃ ┗download_frame: min=0 ms, median=0.121 ms, max=0.385 ms, 99th percentile=0.213 ms, 0.188084 calls per parent call
+22:07:49.522:  ┃ ┗output_video_data: min=0.466 ms, median=1.123 ms, max=2.917 ms, 99th percentile=1.844 ms, 0.188062 calls per parent call
+22:07:49.522:  ┗render_displays: min=0.002 ms, median=1.304 ms, max=87.181 ms, 99th percentile=19.776 ms
+22:07:49.522: OBSBasic::ResetOutputs: 0.103 ms
+22:07:49.522: video_thread(video): min=0.001 ms, median=3.408 ms, max=12.696 ms, 99th percentile=5.597 ms
+22:07:49.522:  ┗receive_video: min=1.358 ms, median=3.396 ms, max=12.694 ms, 99th percentile=5.43 ms
+22:07:49.523:    ┗do_encode: min=1.357 ms, median=3.395 ms, max=12.692 ms, 99th percentile=5.428 ms
+22:07:49.523:      ┣encode(simple_video_stream): min=1.351 ms, median=3.375 ms, max=6.699 ms, 99th percentile=5.408 ms
+22:07:49.523:      ┗send_packet: min=0.002 ms, median=0.01 ms, max=8.675 ms, 99th percentile=0.065 ms
+22:07:49.523: =================================================
+22:07:49.523: == Profiler Time Between Calls ==================
+22:07:49.523: obs_hotkey_thread(25 ms): min=25.102 ms, median=30.34 ms, max=119.212 ms, 11.1467% within ±2% of 25 ms (0% lower, 88.8533% higher)
+22:07:49.523: obs_graphics_thread(33.3333 ms): min=2.825 ms, median=33.333 ms, max=102.651 ms, 81.4261% within ±2% of 33.333 ms (9.18942% lower, 9.38448% higher)
+22:07:49.523: obs_graphics_thread(33.3333 ms): min=3.646 ms, median=33.333 ms, max=203.917 ms, 84.8449% within ±2% of 33.333 ms (7.99499% lower, 7.16012% higher)
+22:07:49.523: =================================================
+22:07:49.697: Number of memory leaks: 0

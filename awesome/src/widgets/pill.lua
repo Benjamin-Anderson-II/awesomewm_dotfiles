@@ -3,7 +3,7 @@ local wibox = require("wibox")
 local dpi = require("beautiful").xresources.apply_dpi
 
 return function(contents)
-  local pill =  wibox.widget {
+  local pill = wibox.widget {
     {
       {
         id = 'container',

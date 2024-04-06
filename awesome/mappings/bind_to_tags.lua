@@ -4,6 +4,19 @@ local globalkeys = require("mappings.global_keys")
 
 local modkey = user_vars.modkey
 
+globalkeys = gears.table.join(globalkeys,
+  awful.key({ modkey }, "Return",
+  function()
+    local c = client.focus
+    if client then
+      c:move_to_screen()
+    end
+  end,
+  { description = "Move Current Client to Next screen", group = "Client" }),
+  awful.key({ modkey }, ",", awful.tag.viewprev),
+  awful.key({ modkey }, ".", awful.tag.viewnext)
+)
+
 for i = 1, 9 do
   globalkeys = gears.table.join(globalkeys,
     awful.key({ modkey }, "#" .. i + 9,
@@ -18,15 +31,6 @@ for i = 1, 9 do
     end,
     { description = "View Tag " .. i, group = "Tag" }),
 
-    awful.key({ modkey, "Control" }, "#" .. i + 9,
-    function()
-      local screen = awful.screen.focused()
-      local tag = screen.tags[i]
-      if tag then
-        tag:viewtoggle()
-      end
-    end,
-    { description = "Toggle Tag " .. i, group = "Tag" }),
 
     awful.key({ modkey, "Shift" }, "#" .. i + 9,
     function()
