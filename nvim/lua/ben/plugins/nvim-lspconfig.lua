@@ -1,7 +1,7 @@
 return {
   'neovim/nvim-lspconfig',
 --  event = "VeryLazy",
-  ft = {"lua", "python", "make", "c", "ruby"},
+  ft = {"lua", "python", "make", "c", "ruby", "cpp", "sh", "haskell"},
   config = function ()
     local lspconfig = require("lspconfig")
     lspconfig.pyright.setup{}
@@ -27,5 +27,6 @@ return {
     lspconfig.autotools_ls.setup{}
     lspconfig.asm_lsp.setup{}
     lspconfig.ruby_ls.setup{}
+    lspconfig.ghcide.setup{}
   end
 }

@@ -1,0 +1,80 @@
+{
+  "geometry-of-main_window_geometry": {
+    "frame_geometry": {
+      "height": 1405,
+      "width": 2560,
+      "x": 0,
+      "y": 35
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1403,
+      "width": 2558,
+      "x": 1,
+      "y": 36
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 1403,
+      "width": 2558,
+      "x": 1,
+      "y": 36
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAAAAAAIwAACf8AAAWfAAAAAQAAACQAAAn+AAAFngAAAAEAAAAACgAAAAABAAAAJAAACf4AAAWe"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1440,
+        "width": 2560,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 1,
+      "manufacturer": "Acer Technologies",
+      "model": "KA272U",
+      "name": "HDMI-1-0",
+      "serial": "TJJAA0013P00",
+      "size_in_logical_pixels": {
+        "height": 1440,
+        "width": 2560
+      },
+      "virtual_geometry": {
+        "height": 1440,
+        "width": 4480,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "main_window_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAAAAAAAAPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawAAAAAA/////wAAAIYA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAlAD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB7AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOYA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAEgD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAM8A////AAAJ/gAABXsAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+  },
+  "old_prefs_migrated": true,
+  "session_data": {
+    "base_font_size": 16,
+    "controls_help_shown_count": 2,
+    "standalone_font_settings": {},
+    "standalone_misc_settings": {
+      "remember_last_read": true,
+      "remember_window_geometry": false,
+      "save_annotations_in_ebook": true,
+      "singleinstance": false
+    },
+    "standalone_recently_opened": [
+      {
+        "authors": [
+          "T. Kingfisher"
+        ],
+        "key": "/home/Ben/Calibre Library/T. Kingfisher/Paladin's Grace (2)/Paladin's Grace - T. Kingfisher.epub",
+        "pathtoebook": "/home/Ben/Calibre Library/T. Kingfisher/Paladin's Grace (2)/Paladin's Grace - T. Kingfisher.epub",
+        "timestamp": "2024-10-11T21:32:27.821Z",
+        "title": "Paladin's Grace"
+      }
+    ]
+  }
+}

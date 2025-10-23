@@ -1,0 +1,32 @@
+00:00:00.455883 VirtualBox GUI VM Selector Window 7.0.18 r162988 linux.amd64 (May  3 2024 17:29:05) release log
+00:00:00.455888 Log opened 2024-05-15T00:41:50.717592000Z
+00:00:00.455889 Build Type: release
+00:00:00.455893 OS Product: Linux
+00:00:00.455895 OS Release: 6.8.9-arch1-2
+00:00:00.455897 OS Version: #1 SMP PREEMPT_DYNAMIC Tue, 07 May 2024 21:35:54 +0000
+00:00:00.455940 DMI Product Name: GF65 Thin 9SD
+00:00:00.455958 DMI Product Version: REV:1.0
+00:00:00.455967 Firmware type: UEFI
+00:00:00.456954 Secure Boot: Disabled
+00:00:00.457035 Host RAM: 31940MB (31.1GB) total, 29512MB (28.8GB) available
+00:00:00.457043 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.457044 Process ID: 173569
+00:00:00.457045 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.457100 Qt version: 5.15.13
+00:00:00.460139 GUI: UIMediumEnumerator: Initial medium-enumeration finished!
+00:00:00.479674 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.914851 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 0x35 x 1918x1043
+00:00:00.933460 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:14:28.662392 GUI: UIMediumEnumerator: Medium with key={{a62f85eb-d47d-444f-8b66-28801c49869f}} created
+00:14:28.718187 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:14:32.221760 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:14:59.475194 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:15:46.395680 GUI: UIMediumEnumerator: Medium with key={{2ed9fd33-e1cc-41f1-8edb-5b4d238de477}} created
+00:15:46.489915 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:15:49.517493 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:16:18.888882 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:35:08.306643 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:35:15.404606 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:35:42.420553 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:43:20.363198 GUI: UICommon: Handling aboutToQuit request..
+00:43:20.974084 GUI: UICommon: aboutToQuit request handled!

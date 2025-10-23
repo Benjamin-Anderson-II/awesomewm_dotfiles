@@ -1,0 +1,61 @@
+:q
+tuple2List $ removeVertex 3 graph1
+removeVertex 3 graph1 
+numVE $ removeLoops graph1
+removeLoops graph1 
+graph1
+numVE graph1
+tuple2List graph1
+isBST $ convertBST tree5
+isBST tree6
+isBST tree5
+isBST tree4
+isBST tree3
+isBST tree2
+isBST tree1
+tree3
+convertBST tree3
+convertBST tree2
+convertBST tree1
+intSort $ inorder $ mergeTrees tree2 tree3
+:?
+intSort $ inorder tree2
+intSort (inorder tree2)
+intSort inorder tree2
+treeSort inorder tree2
+inorder intSort tree2
+inorder tree2
+tree3
+tree1
+:a HW2
+:e HW2.hs 
+:a HW2
+:e HW2.hs 
+:a HW2.hs 
+:e HW2.hs 
+:a HW2
+:e HW2.hs 
+:q
+:a HW2
+:e HW2.hs 
+:e HW2.hs 
+:a HW2
+:e HW2.hs
+:set editor nvim
+:q
+:q
+:q
+clear
+:q
+:a HW2
+:q
+:a HW2
+:q
+:a HW2
+:q
+:add HW2
+:?
+:quit
+quit
+:?
+exit

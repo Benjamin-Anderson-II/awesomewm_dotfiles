@@ -53,10 +53,6 @@ v.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   pattern = {'*.txt', '*.md', '*.wiki'},
   command = 'setlocal nolist wrap linebreak breakat&vim'
 })
-v.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-  pattern = {'*.lua'},
-  command = "setlocal tabstop=2",
-})
 v.cmd("autocmd FileType vimwiki nnoremap <buffer> <Leader>wx :VimwikiToggleListItem<CR>")
 
 v.cmd("let g:wiki_root = '~/wiki'")

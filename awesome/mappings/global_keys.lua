@@ -91,6 +91,11 @@ return gears.table.join(
   end,
   { description = "Screenshot area", group = "Screenshot" }),
 
+  awful.key({ "Shift" }, "Print", function()
+    awful.spawn("sh " .. Script_Dir .. "windowshot.sh")
+  end,
+  { description = "Screenshot area", group = "Screenshot" }),
+
 ---- LAUNCHERS ----
   awful.key({ modkey }, "r", function()
     awful.spawn.with_shell("rofi -show drun")

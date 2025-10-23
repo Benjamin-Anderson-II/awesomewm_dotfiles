@@ -17,11 +17,11 @@ local second_timers = function()
   _helper('get_temp.sh c', 'temperature')
   _helper('get_battery.sh', 'battery')
   _helper('get_gpu.sh', 'gpu')
+  _helper('get_clock.sh', 'clock')
 end
 
 local minute_timers = function()
   _helper('network.sh', 'network')
-  _helper('get_clock.sh', 'clock')
 end
 
 local five_min_timers = function()

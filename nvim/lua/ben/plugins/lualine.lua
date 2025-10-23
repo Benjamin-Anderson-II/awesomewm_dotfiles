@@ -1,12 +1,16 @@
-local ll = {
-	lualine_b = {'branch', 'diff', {'diagnostics', symbols = {error = 'E', warn = 'W', info = 'I', hint = 'H'}, update_in_insert = true,}},
-	lualine_x = {'encoding', {'fileformat', symbols = {unix = 'unix', dos = 'dos', mac = 'mac' }}, 'filetype'},
-}
-
 return {
-	"nvim-lualine/lualine.nvim",
-	event = "VeryLazy",
-	opts = function(_, opts)
-		table.insert(opts, { ['ll'] = ll })
-	end,
+  "nvim-lualine/lualine.nvim",
+  event = "VeryLazy",
+  opts = {
+    options = {
+      component_separators = '|',
+      section_separators = { left = '', right = '' },
+    },
+    sections = {
+      lualine_a = { {'mode', separator = { left = '' }, right_padding = 2 }},
+      lualine_b = {'branch', 'diff', {'diagnostics', update_in_insert = true}},
+      lualine_x = {'encoding', 'fileformat', 'filetype'},
+      lualine_z = {{'location', separator = {right = ''}, left_padding = 2}},
+    }
+  }
 }
